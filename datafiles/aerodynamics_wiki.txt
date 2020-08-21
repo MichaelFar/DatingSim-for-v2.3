@@ -1,0 +1,8 @@
+Your God King:ok listen, formatting the entire wiki is like a lot of work so I'm going to do that waaaaaaaaaaaay later
+Your God King:for now we are going to loop back to the beginning of the game
+Your God King:3
+Your God King:2
+Your God King:1
+#
+goto
+FirstScene_two.txt

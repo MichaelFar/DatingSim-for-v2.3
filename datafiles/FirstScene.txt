@@ -1,0 +1,63 @@
+BACKGROUND_FLAG[player-bedroom]???: "Come on, GET UP, baka! You're going to make me late for school!"
+[You wake up to a girl standing over you. Startled, you blink sleep from your eyes, the girl's face slowly coming into focus.  She looks angry.]
+???: "Are you deaf, PenisChamp? I said GET UP!"
+[Very angry. You squint, trying to make out her features.]
+???: "PenisChamp, please. PLEASE don't make us late again. Not today of all days" She's starting to sound desperate now
+[Wait a minute. You know that voice. It's the voice of--]
+PC: "Lila? What are you doing in my room?" Lila is one of my closest friends, but it's still weird for her to be in my room.
+Lila: "Your mom let me in, baka."
+PC: "But, Lila--I'm not wearing any..." You feel your face heat up. 
+Lila: "PenisChamp? Are you nak--" Her eyes go wide at the revelation. "Pervert!"
+PC: "What? How am I the pervert? You're the one who walked in on me sleeping!" Now it's Lila's turn to blush.
+Lila: "Baka! It's not like I wanted to see you sleeping. You weren't getting up when I knocked. I had to come in. Now get dressed, we're gonna be late!"
+[Lila walks out of your room, slamming the door behind her. You hastily put on clothes, brush your teeth, and grab your backpack before taking the stairs two at a time to meet Lila at the front door]
+BACKGROUND_FLAG[front-door]{Scene Change to generic pic of front door}
+Lila: "Finally! What took you so long?"
+PC: "I was--"
+Lila: "Nevermind! Let's go, or we're going to have to run to make it on time."
+{Scene change to Lila walking with toast in her mouth}
+[It's a beautiful spring morning.]
+BACKGROUND_FLAG[cherry-trees]PC: "The cherry blossoms are blooming."
+Lila: "Yeah, didn't you notice last week?"
+PC: "No, I--I guess I didn't."
+Lila: "Baka. You're so dense, you wouldn't notice if something hit you in the head"
+PC: "Hey! That's not very nice."
+Lila: "But it is very true. Anyway, are you thinking about taking any girls to go see the cherry blossoms?" She's kind of laughing when she says it.
+PC: "I can't even get a girl to go to prom with me, let alone something like that."
+Lila: "What? You don't have a prom date? It's in a week, baka!"
+PC: "I know, I know. It's just-- You know, I just transferred to Inspire this term, and I hardly know anyone."
+Lila: "So you're just going to go alone? That's so sad, PenisChamp."
+PC: "No, I probably just won't go. I don't really care about prom, anyway."
+Lila: "What?!?! PenisChamp, you have to go to prom! Everyone goes to prom!"
+PC: "But you just said it'd be sad if I went without a date!"
+Lila: "Then ask someone, baka."
+PC: "I don't even know who to ask. And besides, whoever I did ask probably wouldn't agree to go with me."
+Lila: "They would if you give them what they want!"
+PC: "What does that even mean?"
+Lila: "You really are clueless, aren't you? See that girl walking ahead of us? The one holding the pack of cigarettes?"
+PC: "Yeah, what about her?"
+Lila: "Ask her to go to prom with you!"
+PC: "What? No, I couldn't!"
+Lila: "You have to! You can't go to prom alone, baka."
+PC: "But what if she says no?"
+Lila: "She won't say no if you give her what she wants! Now go! We're almost at school!"
+[Lila practically pushes you up to her. In the brief moments before you reach her side, you wonder what it is this girl could possibly want]
+{Scene change to talking to generic anime girl}
+PC: "Uh, hi, My friend back there wanted me to talk to you."
+Girl: "Oh, hi! You're PenisChamp, right?"
+PC: "Yeah! Uh, I just--I wanted to ask if you'd go to prom with me?" Your voice cracks as she says it.
+[The girl stops suddenly, a blank expression on her face. You look down and realize she's holding out her right hand.] 
+#
+choicecreate
+High Five
+FirstScene_two.txt
+[EX_hhh]text_flag_high_five
+Handshake
+FirstScene_two.txt
+[EX_hhh]text_flag_hand_shake
+Hug
+FirstScene_two.txt
+[EX_hhh]text_flag_hug
+META_DATA
+Day:???
+Group:Tutorial
