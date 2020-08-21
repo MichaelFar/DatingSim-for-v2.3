@@ -14,8 +14,8 @@ create_button((room_width / 2) - (_width / 2), (room_height / 5) + (_height + 40
 
 
 
-instance_destroy(oSaveLoad);
+//instance_destroy(oSaveLoad);
 
-instance_destroy(oOptions);
+//instance_destroy(oOptions);
 
 instance_destroy(oList);

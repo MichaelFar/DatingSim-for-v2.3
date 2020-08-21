@@ -1,8 +1,8 @@
-function create_namePlate() {
+function create_namePlate(_text, _x, _y) {
 
-	var _text = argument[0];
-	var _x = argument[1];
-	var _y = argument[2];
+	//var _text = argument[0];
+	//var _x = argument[1];
+	//var _y = argument[2];
 
 	instance_destroy(oNamePlate);
 	var _namePlate = instance_create_layer(_x, _y, "Text", oNamePlate);

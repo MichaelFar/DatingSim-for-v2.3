@@ -1,6 +1,6 @@
-function load_game() {
+function load_game(_loadedFile) {
 
-	var _loadedFile = argument[0];
+	//var _loadedFile = argument[0];
 
 	var openFile = file_text_open_read(working_directory + _loadedFile);
 	var i = 0;

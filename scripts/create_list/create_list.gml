@@ -1,13 +1,13 @@
-function create_list() {
+function create_list(_x, _y, _width, _height, _type) {
 
 
-
+/*
 	var _x = argument[0];
 	var _y = argument[1];
 	var _width = argument[2];
 	var _height = argument[3];
 	var _type = argument[4];
-
+*/
 
 	var _list = instance_create_layer(_x , _y, "Instances", oList);
 

@@ -1,8 +1,9 @@
-function create_choice() {
+function create_choice(_flagIndex, _text, _destination, _script, _x, _y, _flags, _wasClicked, _isLocked) {
 	/*
 
 	*/
 	//show_debug_message("Attempting to create choice");
+	/*
 	var _flagIndex = argument[0]
 	var _text = argument[1];
 	var _destination = argument[2];
@@ -12,6 +13,7 @@ function create_choice() {
 	var _flags = argument[6];
 	var _wasClicked = argument[7];
 	var _isLocked = argument[8];
+	*/
 	var _choice = instance_create_layer(_x, _y, "Text", oChoice);
 	instance_destroy(oTextBox);
 

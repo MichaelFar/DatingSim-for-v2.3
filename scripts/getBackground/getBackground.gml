@@ -1,8 +1,8 @@
-function getBackground() {
+function getBackground(_line) {
 
 
 
-	var _line = argument[0];
+	//var _line = argument[0];
 
 	var foundBack = false;
 	var i = 0;

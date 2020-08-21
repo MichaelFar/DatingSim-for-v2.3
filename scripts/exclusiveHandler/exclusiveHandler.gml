@@ -1,11 +1,11 @@
-function exclusiveHandler() {
+function exclusiveHandler(_flag, _flagArray) {
 	/*
 	arg0 _flag
 	*/
 
 
-	var _flag = argument[0];
-	var _flagArray = argument[1];
+	//var _flag = argument[0];
+	//var _flagArray = argument[1];
 		//show_debug_message(string_format(global.currentBranch, 0, 0) + " is where we are currently headed");
 		//show_debug_message("Detected _flag within choice box: " + _flag);
 	var _hasFlag = false;

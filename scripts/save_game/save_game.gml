@@ -1,5 +1,5 @@
-function save_game() {
-	var _currentSave = argument[0];
+function save_game(_currentSave) {
+	//var _currentSave = argument[0];
 
 	_currentSave += ".txt";
 	show_debug_message("_currentSave is " + _currentSave);

@@ -1,9 +1,9 @@
-function instruction_parser() {
+function instruction_parser(_instructions) {
 	/*
 	arg instructions (array)
 	*/
 
-	var _instructions = argument[0];
+	//var _instructions = argument[0];
 
 
 	var i = 0; 

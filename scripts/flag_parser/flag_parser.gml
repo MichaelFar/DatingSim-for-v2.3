@@ -1,4 +1,4 @@
-function flag_parser() {
+function flag_parser(_flag, _branches, _branchAddress, _index) {
 	//This script will find flags and handle them
 	//If a text line has a flag and is displayed the player should have a flag initialized
 	/*
@@ -16,10 +16,10 @@ function flag_parser() {
 		prom_name; during the prom scene you have a prom score threshold that the player must meet to get good ending
 	*/
 
-	var _flag = argument[0];
-	var _branches = argument[1];
-	var _branchAddress = argument[2];
-	var _index = argument[3];
+	//var _flag = argument[0];
+	//var _branches = argument[1];
+	//var _branchAddress = argument[2];
+	//var _index = argument[3];
 	var _EX = 0;
 	var _iterator = _index;
 	var i = 0;

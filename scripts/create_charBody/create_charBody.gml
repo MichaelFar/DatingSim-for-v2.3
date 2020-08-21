@@ -1,7 +1,6 @@
-function create_charBody() {
+function create_charBody(_x, _y) {
 
-	var _x = argument[0];
-	var _y = argument[1];
+	
 
 
 
