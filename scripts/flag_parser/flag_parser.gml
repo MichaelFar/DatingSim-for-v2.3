@@ -51,14 +51,11 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 		show_debug_message(global.flags);
 		show_debug_message("global.flags size is " + string(array_length(global.flags)));
 		*/
-		if(string_pos("PenisChamp", _branches[_branchAddress][_index]) != 0)
+		if(string_pos("{PLAYERNAME}", _branches[_branchAddress][_index]) != 0)
 		{
-			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "PenisChamp", global.playerName);
+			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "{PLAYERNAME}", global.playerName);
 		}
-		if(string_pos("Penischamp", _branches[_branchAddress][_index]) != 0)
-		{
-			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "Penischamp", global.playerName);
-		}
+		
 	
 		if(string_pos(global.flags[i], _branches[_branchAddress][_index]) == 0)	
 		{

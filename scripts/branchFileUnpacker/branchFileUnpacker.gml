@@ -87,6 +87,8 @@ function branchFileUnpacker() {
 			buffer = file_text_read_string(openFile);
 			if (buffer != "#" && foundInstructions == false && foundMeta == false)
 			{
+				buffer = string_replace_all(buffer, "PenisChamp", "{PLAYERNAME}")
+				buffer = string_replace_all(buffer, "Penischamp", "{PLAYERNAME}")
 				global.branches[i][j] = buffer;
 				j++;
 				file_text_readln(openFile);
