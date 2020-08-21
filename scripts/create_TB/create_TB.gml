@@ -23,13 +23,13 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 	with (_textBox) 
 	{
 		global.newFlagIndex = _index;
-		show_debug_message("Current branch location: " + global.branches[_branchAddress, 0]);
+		show_debug_message("Current branch location: " + global.branches[_branchAddress][0]);
 		global.currentBranch = _branchAddress;
 	
 		//This loop finds the name from the text file and makes sure it doesn't show up in the main text
 		//The name should show up in the designated nameplate area
 		keyFinder();
-		if(array_length_2d(_branches, _branchAddress) == 1) //If the file is only instructions activate the instructions
+		if(array_length(_branches[_branchAddress]) == 1) //If the file is only instructions activate the instructions
 		{	
 			instruction_parser(global.instructions);
 		
@@ -37,7 +37,7 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 		else
 		{
 			_textBuffer = flag_parser(_flag, _branches,_branchAddress, _index);
-			for(k = 0; k < array_length_1d(global.names); k++) 
+			for(k = 0; k < array_length(global.names); k++) 
 			{
 				if (string_pos(global.names[k], _textBuffer) != 0) 
 				{		

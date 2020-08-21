@@ -17,7 +17,7 @@ function load_game(_loadedFile) {
 
 	file_text_close(openFile);
 
-	for(i = 0; i < array_length_1d(global.saveFileContents); i++)
+	for(i = 0; i < array_length(global.saveFileContents); i++)
 	{
 		if(i == 0)
 		{
@@ -85,7 +85,7 @@ function load_game(_loadedFile) {
 	/*
 	show_debug_message("Loaded bool Flags " + string(global.boolFlags));
 	show_debug_message("The number of flags should be " + string(_numFlags) + 
-	"\nThe number of flags there are " + string(array_length_1d(global.flags)));
+	"\nThe number of flags there are " + string(array_length(global.flags)));
 	*/
 	if (_numFlags != 0)
 	{

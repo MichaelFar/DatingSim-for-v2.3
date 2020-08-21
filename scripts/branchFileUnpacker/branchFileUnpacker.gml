@@ -17,11 +17,17 @@ function branchFileUnpacker() {
 	{
 		while (!file_text_eof(openFile)) 
 		{
-			global.branches[i, 0] = file_text_read_string(openFile); // global.branches[i, 0] are reserved for filenames
-			global.instructions[i, 0] = global.branches[i, 0];
-			global.metaData[i, 0] = global.branches[i, 0];
+			global.branches[i][0] = file_text_read_string(openFile); // global.branches[i][0] are reserved for filenames
+			global.instructions[i][0] = global.branches[i][0];
+			global.metaData[i][0] = global.branches[i][0];
+			/*
+			global.branches[i][0] = file_text_read_string(openFile); // global.branches[i][0] are reserved for filenames
+			global.instructions[i][0] = global.branches[i][0];
+			global.metaData[i][0] = global.branches[i][0];
+			*/
 			i++;
 			file_text_readln(openFile);
+		
 		}
 		file_text_close(openFile);
 	}
@@ -64,9 +70,9 @@ function branchFileUnpacker() {
 		file_text_close(openFile);
 	}
 
-	for (i = 0; i < array_height_2d(global.branches); i++) //load the dialogue into the dialogue arrays
+	for (i = 0; i < /*array_height_2d(global.branches)*/ array_length(global.branches); i++) //load the dialogue into the dialogue arrays
 	{
-		openFile = file_text_open_read(working_directory + global.branches[i, 0]);
+		openFile = file_text_open_read(working_directory + global.branches[i][0]);
 		
 		foundInstructions = false;
 		foundMeta = false;
@@ -81,14 +87,14 @@ function branchFileUnpacker() {
 			buffer = file_text_read_string(openFile);
 			if (buffer != "#" && foundInstructions == false && foundMeta == false)
 			{
-				global.branches[i, j] = buffer;
+				global.branches[i][j] = buffer;
 				j++;
 				file_text_readln(openFile);
 			}
 			else if(buffer !="META_DATA" && foundMeta == false)
 			{
 				foundInstructions = true;
-				global.instructions[i, z] = buffer;
+				global.instructions[i][z] = buffer;
 				if(string_pos("LOCK_", buffer) != 0)
 				{
 				
@@ -97,7 +103,7 @@ function branchFileUnpacker() {
 					_numKeys = real(string_digits(buffer));
 					for(k = 1; k < _numKeys + 1; k++)
 					{
-						global.LockAndKeys[_keyIndex, k] = false;
+						global.LockAndKeys[_keyIndex][k] = false;
 					}
 					//show_debug_message("Key number " + _keyIndex + " of LockAndKeys is " + global.LockAndKeys[_keyIndex, 0]);
 					_keyIndex++;
@@ -110,7 +116,7 @@ function branchFileUnpacker() {
 			else
 			{
 				foundMeta = true;
-				global.metaData[i, m] = buffer;
+				global.metaData[i][m] = buffer;
 				file_text_readln(openFile);
 				m++;
 			}

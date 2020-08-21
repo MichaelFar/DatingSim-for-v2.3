@@ -5,7 +5,7 @@ function on_click_TB() {
 	if (objectType == "TB") 
 	{
 		index += 1;
-		if (index < array_length_2d(currentArray, global.currentBranch)) 
+		if (index < array_length(currentArray[global.currentBranch])) 
 		{
 			global.currentTBID = create_TB(currentArray, index, global.currentBranch, on_click_TB, flag);
 		}

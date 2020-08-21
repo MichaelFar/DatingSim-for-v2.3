@@ -27,7 +27,7 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	//if(string_pos("text_", _flag) != 0) 
 	//{
 		
-	for (i = 0; i < array_length_1d(global.flags); i++) 
+	for (i = 0; i < array_length(global.flags); i++) 
 	{
 		if (string_pos("[", global.flags[i]) != 0)  //Checks for flag exclusivity clause
 		{
@@ -49,54 +49,54 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 		}
 		/*
 		show_debug_message(global.flags);
-		show_debug_message("global.flags size is " + string(array_length_1d(global.flags)));
+		show_debug_message("global.flags size is " + string(array_length(global.flags)));
 		*/
-		if(string_pos("PenisChamp", _branches[_branchAddress, _index]) != 0)
+		if(string_pos("PenisChamp", _branches[_branchAddress][_index]) != 0)
 		{
-			_branches[_branchAddress, _index] = string_replace_all(_branches[_branchAddress, _index], "PenisChamp", global.playerName);
+			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "PenisChamp", global.playerName);
 		}
-		if(string_pos("Penischamp", _branches[_branchAddress, _index]) != 0)
+		if(string_pos("Penischamp", _branches[_branchAddress][_index]) != 0)
 		{
-			_branches[_branchAddress, _index] = string_replace_all(_branches[_branchAddress, _index], "Penischamp", global.playerName);
+			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "Penischamp", global.playerName);
 		}
 	
-		if(string_pos(global.flags[i], _branches[_branchAddress, _index]) == 0)	
+		if(string_pos(global.flags[i], _branches[_branchAddress][_index]) == 0)	
 		{
-			while(_iterator < array_length_2d(_branches, _branchAddress) 
-			&& string_pos(_EX,_branches[_branchAddress, _iterator]) != 0 
-			&& string_pos(global.flags[i],_branches[_branchAddress, _iterator]) == 0) 
+			while(_iterator < array_length(_branches[_branchAddress]) 
+			&& string_pos(_EX,_branches[_branchAddress][_iterator]) != 0 
+			&& string_pos(global.flags[i],_branches[_branchAddress][_iterator]) == 0) 
 			{
 				_iterator++;
 			}
 		}
 	
-		if(_iterator == array_length_2d(_branches, _branchAddress))
+		if(_iterator == array_length(_branches[_branchAddress])) 
 		{	
 			instruction_parser(global.instructions);
 			_iterator--;
 			break;	
 		}
-		else if (string_pos(global.flags[i],_branches[_branchAddress, _iterator]) != 0) 
+		else if (string_pos(global.flags[i],_branches[_branchAddress][_iterator]) != 0) 
 		{
-			_branches[_branchAddress, _iterator] = 
-			string_delete(_branches[_branchAddress, _iterator], 
-			string_pos(global.flags[i], _branches[_branchAddress, _iterator]),
+			_branches[_branchAddress][_iterator] = 
+			string_delete(_branches[_branchAddress][_iterator], 
+			string_pos(global.flags[i], _branches[_branchAddress][_iterator]),
 			string_length(global.flags[i]));
 		}		
 	}
 	global.newFlagIndex = _iterator;
 
 
-	if(string_pos("BACKGROUND_FLAG", _branches[_branchAddress, _iterator]) != 0)
+	if(string_pos("BACKGROUND_FLAG", _branches[_branchAddress][_iterator]) != 0)
 	{
-		getBackground(_branches[_branchAddress, _iterator]);
-		for(i = 0; i < array_length_1d(global.backGrounds); i++)
+		getBackground(_branches[_branchAddress][_iterator]);
+		for(i = 0; i < array_length(global.backGrounds); i++)
 		{
-			_branches[_branchAddress, _iterator] = string_replace(_branches[_branchAddress, _iterator],"BACKGROUND_FLAG" + global.backGrounds[i], "");
+			_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator],"BACKGROUND_FLAG" + global.backGrounds[i], "");
 		}
 	}
 
-	return _branches[_branchAddress, _iterator];
+	return _branches[_branchAddress][_iterator];
 
 
 

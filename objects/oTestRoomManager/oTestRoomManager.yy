@@ -29,6 +29,8 @@
   },
   "resourceVersion": "1.0",
   "name": "oTestRoomManager",
-  "tags": [],
+  "tags": [
+    "manager",
+  ],
   "resourceType": "GMObject",
 }

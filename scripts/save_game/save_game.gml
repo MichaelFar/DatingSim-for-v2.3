@@ -1,12 +1,12 @@
 function save_game(_currentSave) {
 	//var _currentSave = argument[0];
-
+	var _currentSaveBuffer = _currentSave;
 	_currentSave += ".txt";
 	show_debug_message("_currentSave is " + _currentSave);
 	if(file_exists(_currentSave))
 	{
 		_currentSave = string_replace(_currentSave, ".txt", "");
-		_currentSave = argument[0] + string(global.numSaves);
+		_currentSave = _currentSaveBuffer + string(global.numSaves);
 		_currentSave += ".txt";
 	}
 	var index = 0;
@@ -55,25 +55,25 @@ function save_game(_currentSave) {
 		file_text_writeln(openFile);
 	
 	
-		for(i = 0; i < array_length_1d(global.flags); i++)
+		for(i = 0; i < array_length(global.flags); i++)
 		{
 			file_text_write_string(openFile, global.flags[i]);
 			file_text_writeln(openFile);
 		}
-		for(i = 0; i < array_length_1d(global.boolFlags); i++)
+		for(i = 0; i < array_length(global.boolFlags); i++)
 		{
 			_buffer = global.boolFlags[i];
 			file_text_write_string(openFile, _buffer);
 			show_debug_message("_buffer from within save_game is " + string(_buffer));
 			file_text_writeln(openFile);
 		}
-		for(i = 0; i < array_length_1d(global.keys); i++)
+		for(i = 0; i < array_length(global.keys); i++)
 		{
 		
 			_buffer = global.keys[i];
 			show_debug_message("Saving Keys: Key from save_game is " + _buffer);
 			file_text_write_string(openFile, _buffer);
-			if( i < array_length_1d(global.keys) - 1)
+			if( i < array_length(global.keys) - 1)
 			{
 				file_text_writeln(openFile);
 			}

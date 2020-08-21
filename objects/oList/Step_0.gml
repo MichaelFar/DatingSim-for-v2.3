@@ -42,7 +42,7 @@ if(keyboard_check_pressed(vk_escape))
 	}
 }
 
-if(array_length_1d(global.currentSettings) < _size && type == LIST_TYPE.SETTINGS)
+if(array_length(global.currentSettings) < _size && type == LIST_TYPE.SETTINGS)
 {
 	
 	for (var i = 0; i < _size; i++)
@@ -66,7 +66,7 @@ for (var i = 0; i < _size; i++)
 	
 	var	_name = _arr[PR.NAME];
 	
-	if(i < array_length_1d(objectArray))
+	if(i < array_length(objectArray))
 	{
 		_buffer = objectArray[i];
 	}
@@ -74,7 +74,7 @@ for (var i = 0; i < _size; i++)
 	
 	
 	var	_vals = _arr[PR.VALUES];
-	if(i < array_length_1d(global.currentSettings) && type == LIST_TYPE.SETTINGS)
+	if(i < array_length(global.currentSettings) && type == LIST_TYPE.SETTINGS)
 	{
 		var	_sel = global.currentSettings[i];
 		
@@ -106,7 +106,7 @@ for (var i = 0; i < _size; i++)
 	{
 		hoverID = i;
 		
-		if(i < array_length_1d(global.savedGames))
+		if(i < array_length(global.savedGames))
 		{
 			if(global.savedGames[i] != "(NO SAVE)")
 			{
@@ -244,7 +244,7 @@ for (var i = 0; i < _size; i++)
 						instance_destroy();
 						if(room = RMmainGame)
 						{
-							show_debug_message("You hit back and global.branches is " + string(global.branches));
+							
 							create_list(room_width / 2 - (450 / 2), room_height / 2 - (400 / 2), 450, 400, LIST_TYPE.PAUSE_MENU);
 						}
 						else
@@ -289,7 +289,7 @@ for (var i = 0; i < _size; i++)
 			{
 				_sel += _wheel;
 				
-				_sel = clamp(_sel, 0, array_length_1d(_vals) - 1)
+				_sel = clamp(_sel, 0, array_length(_vals) - 1)
 				
 				_arr[@PR.SELECTED] = _sel;
 				global.currentSettings[i] = _sel;

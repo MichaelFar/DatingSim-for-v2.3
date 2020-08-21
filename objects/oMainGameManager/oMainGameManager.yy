@@ -30,6 +30,8 @@
   },
   "resourceVersion": "1.0",
   "name": "oMainGameManager",
-  "tags": [],
+  "tags": [
+    "manager",
+  ],
   "resourceType": "GMObject",
 }

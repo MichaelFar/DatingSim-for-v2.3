@@ -13,7 +13,7 @@ function getBackground(_line) {
 	layer_background_sprite(background_id, SPRbackgroundSprites);
 	layer_background_speed(background_id, 0);
 
-	for (i = 0; i < array_length_1d(global.backGrounds); i++)
+	for (i = 0; i < array_length(global.backGrounds); i++)
 	{
 		if(string_pos(global.backGrounds[i], _line) != 0)
 		{

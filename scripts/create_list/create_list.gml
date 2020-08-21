@@ -92,7 +92,7 @@ function create_list(_x, _y, _width, _height, _type) {
 			
 			}
 			width += 200;
-			show_debug_message("The size of choiceLabels is " + string(array_length_1d(global.choiceLabels)))
+			show_debug_message("The size of choiceLabels is " + string(array_length(global.choiceLabels)))
 		}
 	
 		for(var i = 0; i < ds_list_size(list); i++)

@@ -20,7 +20,7 @@ function exclusiveHandler(_flag, _flagArray) {
 			_EX = "NOT EXCLUSIVE";	
 		}
 	
-		for (var _i = 0; _i < array_length_1d(_flagArray); _i++) //This for loop checks if global flags already has a _flag
+		for (var _i = 0; _i < array_length(_flagArray); _i++) //This for loop checks if global flags already has a _flag
 		{
 			if(_flagArray[_i] == _flag) 
 			{

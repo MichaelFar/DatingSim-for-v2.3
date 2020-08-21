@@ -1,7 +1,7 @@
+FirstScene.txt
 godkingtest_one.txt
 godKingPromTest.txt
 RGB.txt
-FirstScene.txt
 RGBexit.txt
 RGBinstructions.txt
 RGBresults.txt

@@ -4,7 +4,7 @@ function keyFinder() {
 	var _foundLock = false;
 	var _hadKey = false;
 
-	for(var i = 0; i < array_length_1d(global.flags); i++)
+	for(var i = 0; i < array_length(global.flags); i++)
 	{
 		if(string_pos("KEY_", global.flags[i]) != 0)
 		{
@@ -28,13 +28,13 @@ function keyFinder() {
 		}
 	
 	
-		for(var j = 0; j < array_height_2d(global.LockAndKeys); j++)
+		for(var j = 0; j < array_length(global.LockAndKeys); j++)
 		{
-			if(string_pos(_buffer, global.LockAndKeys[j, 0]) != 0 && string_pos("KEY_" + _buffer, global.LockAndKeys[j, 0]) == 0)
+			if(string_pos(_buffer, global.LockAndKeys[j][0]) != 0 && string_pos("KEY_" + _buffer, global.LockAndKeys[j][0]) == 0)
 			{
 				var _currentLock = j;
 				_foundLock = true;
-				show_debug_message("Found lock within flag_parser" + global.LockAndKeys[_currentLock, 0] + " which is in the " + _buffer + " family");
+				show_debug_message("Found lock within flag_parser" + global.LockAndKeys[_currentLock][0] + " which is in the " + _buffer + " family");
 			}
 		}
 	
@@ -44,7 +44,7 @@ function keyFinder() {
 		{
 			show_debug_message("Your flags before checking to see if they are keys ");
 			show_debug_message(global.flags);
-			for(var k = 0; k < array_length_1d(global.keys); k++)
+			for(var k = 0; k < array_length(global.keys); k++)
 			{
 			
 				if(global.flags[i] == global.keys[k])

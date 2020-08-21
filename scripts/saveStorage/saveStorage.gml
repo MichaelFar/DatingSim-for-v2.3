@@ -12,10 +12,10 @@ function saveStorage() {
 	file_text_write_string(openFile, global.numSaves);
 	file_text_writeln(openFile);
 
-	for(i = 0; i < array_length_1d(global.savedGames); i++)
+	for(i = 0; i < array_length(global.savedGames); i++)
 	{
 			file_text_write_string(openFile, global.savedGames[i]);
-			if( i < array_length_1d(global.savedGames) - 1)
+			if( i < array_length(global.savedGames) - 1)
 			{
 				file_text_writeln(openFile);
 			}

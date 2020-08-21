@@ -12,7 +12,7 @@ function loadStorage() {
 	}
 	file_text_close(openFile);
 
-	for(i = 0; i < array_length_1d(_saveFileContents); i++)
+	for(i = 0; i < array_length(_saveFileContents); i++)
 	{
 		if(i == 0)
 		{

@@ -3,18 +3,18 @@ function save_settings() {
 	{
 		file_delete("Settings.txt");
 	}
-	var index = 0;
+	
 	var i = 0;
 	var openFile = file_text_open_write("Settings.txt");
 
-	var _buffer = 0;
+	
 
 
 
-	for(var i = 0; i < array_length_1d(global.currentSettings); i++)
+	for(var i = 0; i < array_length(global.currentSettings); i++)
 	{
 		file_text_write_real(openFile, global.currentSettings[i]);
-		if( i < array_length_1d(global.currentSettings) - 1)
+		if( i < array_length(global.currentSettings) - 1)
 		{
 			file_text_writeln(openFile);
 		}

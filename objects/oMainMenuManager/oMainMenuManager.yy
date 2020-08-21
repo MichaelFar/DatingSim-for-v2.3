@@ -32,6 +32,8 @@
   },
   "resourceVersion": "1.0",
   "name": "oMainMenuManager",
-  "tags": [],
+  "tags": [
+    "manager",
+  ],
   "resourceType": "GMObject",
 }
