@@ -13,7 +13,9 @@ function save_volume() {
 
 	file_text_write_real(openFile, global.voiceVolume);
 	file_text_writeln(openFile);
-
+	
+	file_text_write_real(openFile, global.textSpeed);
+	file_text_writeln(openFile);
 
 	file_text_close(openFile);
 

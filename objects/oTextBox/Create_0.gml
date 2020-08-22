@@ -11,7 +11,9 @@ hasName = false;
 boxWidth = sprite_width;
 boxHeight = sprite_height;
 hover = 0;
-
+textType = "";
+charCount = 0;
+typeSpeed = global.textSpeed;
 script = -1;
 flag = 0;
 x_textName =  sprite_get_xoffset(sprite_index);

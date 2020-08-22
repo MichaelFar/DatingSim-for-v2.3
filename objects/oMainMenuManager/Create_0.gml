@@ -9,6 +9,7 @@ if(!audio_is_playing(intro) && !audio_is_playing(part_that_loops))
 
 global.currentSettings = 10;
 global.savedGames = 0;
+global.textSpeed = 1;
 global.numSaves = 0;
 global.savedGames[global.numSaves] = "";
 global.wasInMainMenu = false;

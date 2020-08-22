@@ -16,16 +16,12 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 		prom_name; during the prom scene you have a prom score threshold that the player must meet to get good ending
 	*/
 
-	//var _flag = argument[0];
-	//var _branches = argument[1];
-	//var _branchAddress = argument[2];
-	//var _index = argument[3];
+	
 	var _EX = 0;
 	var _iterator = _index;
 	var i = 0;
 	var _buffer = 0;
-	//if(string_pos("text_", _flag) != 0) 
-	//{
+	
 		
 	for (i = 0; i < array_length(global.flags); i++) 
 	{
@@ -47,10 +43,7 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			show_debug_message("Replacing flag " + global.flags[i] + " with flag " + _flag);
 			global.flags[i] = _flag;
 		}
-		/*
-		show_debug_message(global.flags);
-		show_debug_message("global.flags size is " + string(array_length(global.flags)));
-		*/
+		
 		if(string_pos("{PLAYERNAME}", _branches[_branchAddress][_index]) != 0)
 		{
 			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "{PLAYERNAME}", global.playerName);

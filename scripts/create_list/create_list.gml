@@ -28,6 +28,7 @@ function create_list(_x, _y, _width, _height, _type) {
 			case LIST_TYPE.SETTINGS:
 				ds_list_add(list, ["Music Volume", 10, [0, 10 , 20, 30, 40, 50, 60, 70, 80, 90, 100]])
 				ds_list_add(list, ["Voice Volume", 10, [0, 10 , 20, 30, 40, 50, 60, 70, 80, 90, 100]])
+				ds_list_add(list, ["Text Speed", 4, [1, 2, 3, 4, 5]])
 				ds_list_add(list, ["Apply",-1,[]]);
 			break;
 		

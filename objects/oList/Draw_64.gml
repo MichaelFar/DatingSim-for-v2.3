@@ -56,7 +56,7 @@ for (i = 0; i < _size; i++)
 	
 	if (_sel > -1)
 	{
-		if(i < array_length_1d(global.currentSettings) && type == LIST_TYPE.SETTINGS)
+		if(i < array_length(global.currentSettings) && type == LIST_TYPE.SETTINGS)
 		{ 
 			show_debug_message("currentSettings is " + string(global.currentSettings[i]));
 			var _val = _vals[global.currentSettings[i]];
@@ -64,13 +64,24 @@ for (i = 0; i < _size; i++)
 		}
 		else
 		{
+			if(_name == "Text Speed")
+			{
+				_sel = 0;
+				show_debug_message("_sel is now " + string(_sel));
+			}
 			var _val = _vals[_sel];
 		}
 		draw_set_halign(fa_right);
 		if(type == LIST_TYPE.SETTINGS)
 		{
-			
-			draw_text(x + width - padding, _y, /*string(_val)*/string(_val) + "%");
+			if(_name != "Text Speed")
+			{
+				draw_text(x + width - padding, _y, string(_val) + "%");
+			}
+			else
+			{
+				draw_text(x + width - padding, _y, string(_val));
+			}
 		}
 		else
 		{

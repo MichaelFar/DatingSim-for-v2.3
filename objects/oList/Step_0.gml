@@ -49,7 +49,15 @@ if(array_length(global.currentSettings) < _size && type == LIST_TYPE.SETTINGS)
 	{
 		var _arr = list[| i];
 		var	_sel = _arr[PR.SELECTED];
-		global.currentSettings[i] = _sel;
+		var _name = _arr[PR.NAME];
+		if(_name != "Text Speed")
+		{
+			global.currentSettings[i] = _sel;
+		}
+		else
+		{
+			global.currentSettings[i] = 0;
+		}
 	}
 }
 
@@ -87,11 +95,19 @@ for (var i = 0; i < _size; i++)
 			case "Voice Volume":
 			global.voiceVolume = _vals[global.currentSettings[i]];
 			break;
+			
+			case "Text Speed":
+			global.textSpeed   = _vals[global.currentSettings[i]];			
+			break;
 		}
 	}
 	else
 	{
 		var	_sel = _arr[PR.SELECTED];
+		if(_name == "Text Speed")
+		{
+			_sel = 0;
+		}
 	}
 	var _x1 = x + padding;
 	var _y1 = y + padding + itemH * i;
@@ -299,12 +315,23 @@ for (var i = 0; i < _size; i++)
 					switch (_name)
 					{
 						case "Music Volume":
+						
 							global.musicVolume = _vals[global.currentSettings[i]];
-							
-							break;
+						
+						break;
+						
 						case "Voice Volume":
+							
 							global.voiceVolume = _vals[global.currentSettings[i]];
-							break;
+						
+						break;
+						
+						case "Text Speed":
+						
+							global.textSpeed = _vals[global.currentSettings[i]];
+						
+						break;
+						
 					}
 				}
 				

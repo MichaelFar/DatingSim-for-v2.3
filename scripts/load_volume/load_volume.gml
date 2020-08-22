@@ -21,7 +21,10 @@ function load_volume() {
 		{
 			global.voiceVolume = real(_saveFileContents[i])
 		}
-
+		else if (i == 2)
+		{
+			global.textSpeed = real(_saveFileContents[i]);
+		}
 	
 		show_debug_message("Loading setting " + string(_saveFileContents[i]));
 	}
