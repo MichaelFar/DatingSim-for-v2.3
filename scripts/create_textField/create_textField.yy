@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "UI script",
-    "path": "folders/Extensions/Scripts/Main Game Handlers/UI script.yy",
+    "path": "folders/Scripts/Extensions/ScriptsButItClonedIDKwhy/Main Game Handlers/UI script.yy",
   },
   "resourceVersion": "1.0",
   "name": "create_textField",

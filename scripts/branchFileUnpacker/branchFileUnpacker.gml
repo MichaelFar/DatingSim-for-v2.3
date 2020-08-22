@@ -2,6 +2,7 @@ function branchFileUnpacker() {
 	//Write information to a 2d array
 	// 1st index is file lines came from
 	// 2nd index is lines of dialogue
+	//what
 	var i = 0;
 	var j = 1;
 	var z = 0;
