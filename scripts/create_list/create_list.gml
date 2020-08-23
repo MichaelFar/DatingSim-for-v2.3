@@ -59,7 +59,19 @@ function create_list(_x, _y, _width, _height, _type) {
 		
 		
 			break;
-		
+			
+			case LIST_TYPE.GROUP_CHOICE:
+			
+			
+			break;
+			
+			case LIST_TYPE.ARE_YOU_SURE:
+			
+				ds_list_add(list, ["ARE YOU SURE?",-1,[]]);
+				ds_list_add(list, ["Yes",-1,[]]);
+				ds_list_add(list, ["No",-1,[]])
+			
+			break;
 		
 		
 		}
@@ -94,6 +106,19 @@ function create_list(_x, _y, _width, _height, _type) {
 			}
 			width += 200;
 			show_debug_message("The size of choiceLabels is " + string(array_length(global.choiceLabels)))
+		}
+		else if(type == LIST_TYPE.GROUP_CHOICE)
+		{
+			//global.choiceLabels = create_array("Oscar and Quinn", "Treyvon and Noah", "Jane and Michael", "Nolan and Braedin", "Bodie and Joe", "Connor and Ethan", "Anshu and Gun SCP");
+			for(var i = 0; i < array_length(global.choiceLabels); i++)
+			{
+				ds_list_add(list, [global.choiceLabels[i],-1,[]]);
+			}
+			//width = string_width(global.choiceLabels[0]);
+		}
+		if(type == LIST_TYPE.ARE_YOU_SURE)
+		{
+			width = string_width("ARE YOU SURE?") + padding;
 		}
 	
 		for(var i = 0; i < ds_list_size(list); i++)

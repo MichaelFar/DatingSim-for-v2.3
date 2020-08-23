@@ -6,6 +6,7 @@ height = 600;
 hasDestroyed = false;
 
 
+
 global.hasRun = false;
 metaString = "";
 objectCounter = 0;

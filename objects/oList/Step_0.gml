@@ -13,6 +13,7 @@ if(room = RMmainGame)
 	
 }
 
+
 //show_debug_message("The amount of options availibe is " + string(_size));
 if(keyboard_check_pressed(vk_escape))
 {
@@ -65,6 +66,20 @@ if(array_length(global.currentSettings) < _size && type == LIST_TYPE.SETTINGS)
 
 for (var i = 0; i < _size; i++)
 {
+	if(global.prompt.hasAsked && global.prompt.answer && type == LIST_TYPE.GROUP_CHOICE)
+	{
+		index = 0;
+		instance_destroy();
+		exclusiveHandler(global.tempFlags[i], global.flags);
+		create_TB(global.branches, index + 1, global.prompt.index, on_click_TB, global.tempFlags[i]);
+		shouldBreak = true;
+		global.prompt.hasAsked = false;
+	}
+	else
+	{
+		global.prompt.hasAsked = false;
+		global.prompt.answer = false;
+	}
 	if(shouldBreak)
 	{
 		break;
@@ -134,7 +149,7 @@ for (var i = 0; i < _size; i++)
 			}
 		}
 		
-		if(type == LIST_TYPE.CHOICE_MENU)
+		if(type == LIST_TYPE.CHOICE_MENU || type == LIST_TYPE.GROUP_CHOICE)
 		{
 			if(_name != "~~~~~~LOCKED~~~~~~")
 			{
@@ -270,11 +285,23 @@ for (var i = 0; i < _size; i++)
 						global.inPauseMenu = false;
 					}
 				break;
-				//CHOICE MENU
+				//CHOICE MENU or GROUP CHOICE(used once)
 				
 			
 				case _choiceBuffer:
-					if(!global.masterClickTracker[i])
+					if(type == LIST_TYPE.GROUP_CHOICE)
+					{
+						
+						if(!global.prompt.hasAsked)
+						{
+							instance_destroy();
+							create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.ARE_YOU_SURE);
+							global.prompt.index = global.choiceDestinations[i];
+							shouldBreak = true;
+						}
+						
+					}
+					else if(!global.masterClickTracker[i] && type = LIST_TYPE.CHOICE_MENU)
 					{
 						instance_destroy();
 						index = 0;
@@ -289,7 +316,26 @@ for (var i = 0; i < _size; i++)
 						create_TB(global.branches, index + 1, global.choiceDestinations[i], on_click_TB, global.tempFlags[i]);
 						shouldBreak = true;
 					}
+					
 				break;
+				//YES & NO prompt
+				
+				case "Yes":
+					global.prompt.hasAsked = true;
+					global.prompt.answer = true;
+					instance_destroy();
+					create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.GROUP_CHOICE);
+					shouldBreak = true;
+				break;
+				
+				case "No":
+					global.prompt.hasAsked = true;
+					global.prompt.answer = false;
+					instance_destroy();
+					create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.GROUP_CHOICE);
+					shouldBreak = true;
+				break;
+				
 			}
 			break;
 		}

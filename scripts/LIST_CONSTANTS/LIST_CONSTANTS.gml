@@ -8,7 +8,9 @@ function LIST_CONSTANTS() {
 		TEST,
 		SAVE_MENU,
 		LOAD_MENU,
-		CHOICE_MENU
+		CHOICE_MENU,
+		GROUP_CHOICE,
+		ARE_YOU_SURE
 	
 	}
 	// Options

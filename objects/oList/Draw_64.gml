@@ -42,6 +42,10 @@ for (i = 0; i < _size; i++)
 	{
 		draw_set_color(c_red);
 	}
+	if(_name == "ARE YOU SURE?")
+	{
+		draw_set_color(c_black);
+	}
 	if(draw_get_color() == c_green)
 	{
 		draw_set_color(c_green);

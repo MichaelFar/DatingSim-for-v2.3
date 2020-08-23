@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "UI Main Menu",
-    "path": "folders/Scripts/Extensions/ScriptsButItClonedIDKwhy/Main Menu Scripts/UI Main Menu.yy",
+    "name": "UI script",
+    "path": "folders/Scripts/Extensions/ScriptsButItClonedIDKwhy/Main Game Handlers/UI script.yy",
   },
   "resourceVersion": "1.0",
   "name": "create_list",

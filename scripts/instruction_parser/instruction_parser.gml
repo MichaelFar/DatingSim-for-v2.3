@@ -403,6 +403,45 @@ function instruction_parser(_instructions) {
 			create_list(room_width / 2 - (_totalWidth / 2), room_height / 2 - (_totalHeight / 2), _totalWidth, _totalHeight, LIST_TYPE.CHOICE_MENU);
 		}
 	}
+	else if(_instructions[global.currentBranch][2] == "CHOOSEGROUP") 
+	{
+			global.choiceLabels = "";
+			global.choiceDestinations = "";
+			global.tempFlags = "";
+			for (i = 1; i < array_length(_instructions[global.currentBranch]); i++) 
+			{
+				if (string_pos(".txt",_instructions[global.currentBranch][i]) != 0)
+				{
+					for (j = 0; j < array_length(global.branches); j++) 
+					{
+						if (global.branches[j][0] == _instructions[global.currentBranch][i]) 
+						{
+							_destinations[_numDestinations] = j;
+							global.choiceDestinations[_numDestinations] = j;
+							//global.flagIndex[_numDestinations] = _numDestinations;
+							_labels[_numDestinations] = _instructions[global.currentBranch][i - 1];
+							if (string_pos("flag_",_instructions[global.currentBranch][i + 1]) != 0) 
+							{
+								_flags[_numDestinations] = _instructions[global.currentBranch][i + 1];
+								global.tempFlags[_numDestinations] = _flags[_numDestinations];
+							}
+								_numDestinations += 1;
+						}
+					}
+				}
+			}
+			
+			_totalHeight = 0;
+			for(i = 0; i < _numDestinations; i++)
+			{
+				global.choiceLabels[i] = _labels[i];
+				_totalHeight += string_height(global.choiceLabels[i]);
+				
+			}
+			_totalWidth = 500;
+			
+			create_list(room_width / 2 - (_totalWidth / 2), room_height / 2 - (_totalHeight / 2), _totalWidth, _totalHeight, LIST_TYPE.GROUP_CHOICE);
+	}
 	else if(_instructions[global.currentBranch][2] == "GAMERESTART") 
 	{
 		global.newGame = true;

@@ -1,7 +1,13 @@
+prom_tutorial_kiss.txt
 FirstScene.txt
 godkingtest_one.txt
 godKingPromTest.txt
+CharacterIntroductions.txt
+GroupChoiceInstructions.txt
 RGB.txt
+JaneMichaelStart.txt
+OscarQuinnStart.txt
+godkingplaceholder.txt
 RGBexit.txt
 RGBinstructions.txt
 RGBresults.txt
@@ -29,5 +35,4 @@ prom_lila_tutorial_heartToheart.txt
 prom_lila_tutorial_photoResult.txt
 prom_lila_tutorial_shannon.txt
 prom_lila_tutorial_slowDanceTalk.txt
-prom_tutorial_kiss.txt
 prom_lila_tutorial_SC.txt
