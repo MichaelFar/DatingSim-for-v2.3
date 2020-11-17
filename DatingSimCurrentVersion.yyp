@@ -29,6 +29,7 @@
     {"id":{"name":"flag_parser","path":"scripts/flag_parser/flag_parser.yy",},"order":3,},
     {"id":{"name":"exclusiveHandler","path":"scripts/exclusiveHandler/exclusiveHandler.yy",},"order":4,},
     {"id":{"name":"save_game","path":"scripts/save_game/save_game.yy",},"order":5,},
+    {"id":{"name":"SPRcursor","path":"sprites/SPRcursor/SPRcursor.yy",},"order":6,},
     {"id":{"name":"load_game","path":"scripts/load_game/load_game.yy",},"order":6,},
     {"id":{"name":"getBackground","path":"scripts/getBackground/getBackground.yy",},"order":7,},
     {"id":{"name":"keyFinder","path":"scripts/keyFinder/keyFinder.yy",},"order":8,},

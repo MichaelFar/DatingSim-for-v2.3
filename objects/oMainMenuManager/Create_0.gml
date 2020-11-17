@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.newGame = false;
+window_set_cursor(cr_none);
+cursor_sprite = SPRcursor;
 //soundHandler(intro, false);
 if(!audio_is_playing(intro) && !audio_is_playing(part_that_loops))
 {

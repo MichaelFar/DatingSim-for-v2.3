@@ -9,7 +9,7 @@ function save_game(_currentSave) {
 		_currentSave = _currentSaveBuffer + string(global.numSaves);
 		_currentSave += ".txt";
 	}
-	var index = 0;
+	
 	var i = 0;
 	var openFile = file_text_open_write(_currentSave);
 	var _setNameExists = instance_exists(oSetName);

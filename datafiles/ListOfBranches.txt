@@ -1,10 +1,10 @@
-prom_tutorial_kiss.txt
+RGB.txt
 FirstScene.txt
+prom_tutorial_kiss.txt
 godkingtest_one.txt
 godKingPromTest.txt
 CharacterIntroductions.txt
 GroupChoiceInstructions.txt
-RGB.txt
 JaneMichaelStart.txt
 OscarQuinnStart.txt
 godkingplaceholder.txt
