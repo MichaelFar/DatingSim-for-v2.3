@@ -8,7 +8,7 @@ var _length = string_width(inputName);
 var _height = string_height(inputName);
 x_modifier = (_length / 2) + 40;
 y_modifier = (height / 10);
-
+draw_self();
 draw_set_color(c_blue);
 draw_set_font(fnt_prompt);
 

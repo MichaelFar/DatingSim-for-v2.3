@@ -85,6 +85,15 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator],"BACKGROUND_FLAG" + global.backGrounds[i], "");
 		}
 	}
+	if(string_pos("[SHAKE]", _branches[_branchAddress][_iterator]) != 0)
+	{
+		_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], "[SHAKE]", "");
+		show_debug_message("We should be shaking");
+		for(i = 0; i < 5; i++)
+		{
+			create_shaker();
+		}
+	}
 
 	return _branches[_branchAddress][_iterator];
 

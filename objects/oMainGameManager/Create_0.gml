@@ -5,6 +5,7 @@ global.boxY = (room_height * .75);
 audio_stop_all();
 index = 0;
 metaString = "";
+
 global.branches = 0;//All branches of dialogue player can access
 global.currentBranch = 0;//where the player is within the branches
 global.instructions = 0;//instructions written at the end of each text file

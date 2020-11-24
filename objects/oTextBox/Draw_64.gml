@@ -3,7 +3,7 @@
 var nameHeight = string_height(name);
 var stringHeight = string_height(text);
 
-
+draw_self();
 draw_set_color(c_white);
 charCount += typeSpeed;
 textType = string_copy(text, 1, charCount);

@@ -2,7 +2,7 @@ function on_click_TB() {
 	/*
 
 	*/
-	if (objectType == "TB") 
+	if (objectType == "TB" && !instance_exists(oShaker)) 
 	{
 		index += 1;
 		if (index < array_length(currentArray[global.currentBranch])) 

@@ -1,4 +1,4 @@
-RGB.txt
+screenShakeTest.txt
 FirstScene.txt
 prom_tutorial_kiss.txt
 godkingtest_one.txt
@@ -36,3 +36,4 @@ prom_lila_tutorial_photoResult.txt
 prom_lila_tutorial_shannon.txt
 prom_lila_tutorial_slowDanceTalk.txt
 prom_lila_tutorial_SC.txt
+RGB.txt

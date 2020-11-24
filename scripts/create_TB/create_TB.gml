@@ -18,7 +18,7 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 	var _textBuffer = 0;
 	instance_destroy(oTextBox);
 
-	var _textBox = instance_create_layer(global.boxX , global.boxY, "Text", oTextBox);
+	var _textBox = instance_create_layer(global.boxX , global.boxY, "Instances", oTextBox);
 
 	with (_textBox) 
 	{
