@@ -30,7 +30,6 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 		if(array_length(_branches[_branchAddress]) == 1) //If the file is only instructions activate the instructions
 		{	
 			instruction_parser(global.instructions);
-		
 		}
 		else
 		{
@@ -48,7 +47,6 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 					if(name == "PC:")
 					{
 						name = global.playerName;
-					
 					}
 					else
 					{
