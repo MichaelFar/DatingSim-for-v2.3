@@ -4,16 +4,18 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	/*
 	context is merely an identifier for the programmer and does not do anything to the code
 
-		Flag types:
+		In Text Flag types(there are flags that are not within text, see instruction parser):
 
 		[_EX]text_context_context; means that a future line of text is replaced by another line of text
 		_EX is a tag on the flag that denotes if two tags are inherently incompatible
-	
-		RS_-_num(must be a word)_name  ||  RS_+_num(must be a word)_name; means that a characters relationship is affected by an amount
-			in the RS_ flag the - or + sign signifies to add or remove relationship points [x/5]
-			name is the name of the character
-
-		prom_name; during the prom scene you have a prom score threshold that the player must meet to get good ending
+		
+		{PLAYERNAME}: All instances of this are replaced by the chosen player name upon making a new game
+		
+		BACKGROUND_FLAG + global.backGrounds[i]: Tells the game to set the background to this sprite at 'i' frame
+		Use this to set the background to whatever
+		
+		[SHAKE]: Shakes UI....Needs testing
+		
 	*/
 
 	
@@ -89,10 +91,9 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	{
 		_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], "[SHAKE]", "");
 		show_debug_message("We should be shaking");
-		for(i = 0; i < 5; i++)
-		{
+		
 			create_shaker();
-		}
+		
 	}
 
 	return _branches[_branchAddress][_iterator];

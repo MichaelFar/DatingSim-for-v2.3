@@ -41,7 +41,7 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 				{		
 					flag = _flag;
 					//checks if the current line has a flag and then performs the required flag functions
-					_textBuffer = string_delete(_textBuffer, string_pos(global.names[k], _textBuffer), string_length(global.names[k]));
+					_textBuffer = string_delete(_textBuffer, string_pos(global.names[k], _textBuffer), string_length(global.names[k])); //Deletes the name from the text box
 					text = _textBuffer;
 					hasName = true;	//Instructs the text box to draw a name 
 					name = global.names[k]; //This sets the nameplate to be whatever the name in the text line is

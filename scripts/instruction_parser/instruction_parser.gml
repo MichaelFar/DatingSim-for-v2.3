@@ -4,7 +4,65 @@ function instruction_parser(_instructions) {
 	*/
 
 	//var _instructions = argument[0];
-
+	/*
+	THE WONDERFUL INSTRUCTION PARSER:
+	
+	choice flag types:
+	LOCK_context_LOCK: is unlocked upon acquiring all KEY_context_KEY, only usable within choicecreate but persists between files
+	KEY_context_KEY: all of these must be acquired to unlock LOCK_context_LOCK, only usable within choicecreate but persists between files
+	[context]text_: allows for choices to affect the dialogue outcomes in other files, see flag_parser for details
+	{context}(this is for exhaustchoice)
+	{context}target_: unlocked upon all {context} flags within the same file being selected, only usable within exhaustchoice
+	{context}ULTRA_: is unlocked upon all other choices being exhausted, only usable within exhaust choice
+	
+	choicecreate:
+	Creates non exclusive choice objects to fit the labels. On click they will take you to the destination file and store the flag
+	This is used to remember choices
+	You can also lock these choices with LOCK_context_LOCK which upon aquiring all of those the player will unlock any KEY_context_KEY
+	If the player cannot make these choices it will appear as 'locked'
+	Note: Keys and locks are initialized on game start so they can persist throughout different files unlike exhaustchoice
+	In this way exhaustchoice is somewhat deprecated, but makes it so that there isn't any "clogging"
+		format:
+		"
+		choicecreate
+		Label
+		Destination(.txt)
+		Flag
+			"
+	
+	goto:
+	A simple instruction that take the player to the destination file
+	Useful if you want to go back to a different file's instructions
+		format:
+		"
+		goto
+		Destination(.txt)
+			"
+	
+	exhaustchoice:
+	This instruction is for when you want a choice that is only available when all other {context_tag}options are exhausted
+	The choices within this instruction may have {context_tag} where context_tag is replaced with a descriptor label that indicates what choice(s) it will unlock
+	The target choice that is unlocked upon exhausting all {context_tag} is denoted with {context_tag}target_
+	Note: Targets can only be used to unlock ULTRA_ targets which are unlocked after all other choices are selected at least once
+	You shouldn't use this if you want the choices to persist through different files, use choicecreate for that
+		format:
+		"
+		exhaustchoice
+		Label
+		Destination(.txt)
+		{context_tag}Flag(any number of these)
+		Label2
+		Destination2(.txt)
+		{context_tag}target_flag(any number of these)
+		
+			"
+	
+	CHOOSEGROUP:
+	Not yet implemented. Will be used to handle choosing a group to go with
+	
+	GAMERESTART:
+	restarts game: specifically restarts the maingame room, should not be used to boot to menu
+	*/
 
 	var i = 0; 
 	var j = 0;
