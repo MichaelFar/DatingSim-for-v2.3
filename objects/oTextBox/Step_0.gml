@@ -11,12 +11,15 @@
 	click = !click;
 	script_execute(script);	
 	}
-
-	if(hasName) 
+	
+	if(hasName && !createdName) 
 	{
 		create_namePlate(name, x_namePlate, y_namePlate);
+		show_debug_message("There are " + string(_nameCount) + " name plates");
+		_nameCount++;
+		createdName = true;
 	}
-	else
+	else if(!hasName)
 	{
 		instance_destroy(oNamePlate);
 	}

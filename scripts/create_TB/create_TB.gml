@@ -1,8 +1,6 @@
 function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 	/*
-	@arg Text
-	@arg index of text
-	@arg Script
+	
 	
 
 	
