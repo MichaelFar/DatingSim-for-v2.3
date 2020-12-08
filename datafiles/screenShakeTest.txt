@@ -6,3 +6,6 @@ Shake King: [SHAKE]oh yeah we do be shaking tho
 #
 goto
 screenShakeTest.txt
+META_DATA
+Day:???
+Group:Shake King's Test

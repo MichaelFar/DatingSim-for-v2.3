@@ -1,5 +1,5 @@
-screenShakeTest.txt
 FirstScene.txt
+screenShakeTest.txt
 prom_tutorial_kiss.txt
 godkingtest_one.txt
 godKingPromTest.txt

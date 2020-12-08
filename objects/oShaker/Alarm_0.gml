@@ -4,6 +4,11 @@
 //camera_set_view_pos(view_camera[0], 0, 0);
 oTextBox.x = global.boxX;
 oTextBox.y = global.boxY;
-oNamePlate.x = global.namePlateX;
-oNamePlate.y = global.namePlateY;
+
+if(instance_exists(oNamePlate))
+{
+	oNamePlate.x = global.namePlateX;
+	oNamePlate.y = global.namePlateY;
+}
+
 instance_destroy();
