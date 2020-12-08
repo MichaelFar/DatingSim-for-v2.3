@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 var i = 0;
-
+draw_set_font(textBoxFont);
 draw_set_color(c_gray);
 //draw_roundrect(x, y, x + width, y + height, 0);
 NineSliceBox(SlicedBox, x, y, x + width, y + height);

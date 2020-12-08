@@ -1,4 +1,8 @@
 FirstScene.txt
+FirstScene_two.txt
+aerodynamics_wiki.txt
+prom_lila_tutorial_instructions.txt
+aerodynamics_you_fool.txt
 screenShakeTest.txt
 prom_tutorial_kiss.txt
 godkingtest_one.txt
@@ -19,10 +23,10 @@ MazeLost.txt
 MazeLookAround.txt
 godkingtest_two.txt
 godkingtest_three.txt
-FirstScene_two.txt
-aerodynamics_wiki.txt
+regimeResult.txt
+regimeEnd.txt
+regimeInstructions.txt
 prom_lila_tutorial.txt
-prom_lila_tutorial_instructions.txt
 prom_lila_tutorial_fastdance.txt
 prom_lila_tutorial_slowdance.txt
 prom_lila_tutorial_photobooth.txt

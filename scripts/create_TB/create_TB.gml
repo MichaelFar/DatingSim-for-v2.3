@@ -41,9 +41,9 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 					flag = _flag;
 					//checks if the current line has a flag and then performs the required flag functions
 					_textBuffer = string_delete(_textBuffer, string_pos(global.names[k], _textBuffer), string_length(global.names[k])); //Deletes the name from the text box
-					if(string_pos("{PLAYERNAME}", _branches[_branchAddress][_index]) != 0)
+					if(string_pos("{PLAYERNAME}", _textBuffer) != 0)
 					{
-						_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "{PLAYERNAME}", global.playerName);
+						_textBuffer = string_replace_all(_textBuffer, "{PLAYERNAME}", global.playerName);
 					}
 					text = _textBuffer;
 					hasName = true;	//Instructs the text box to draw a name 

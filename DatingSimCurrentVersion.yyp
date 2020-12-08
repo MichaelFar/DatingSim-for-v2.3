@@ -165,6 +165,10 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"OscarQuinnStart.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"JaneMichaelStart.txt","resourceType":"GMIncludedFile",},
     {"CopyToMask":153157610357391598,"filePath":"datafiles","resourceVersion":"1.0","name":"screenShakeTest.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"regimeResult.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"regimeInstructions.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"regimeEnd.txt","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"aerodynamics_you_fool.txt","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2.3.1.536",

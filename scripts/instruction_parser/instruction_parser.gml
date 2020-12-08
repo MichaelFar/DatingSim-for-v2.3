@@ -254,37 +254,38 @@ function instruction_parser(_instructions) {
 				_exhaustTag[i] = _EX;		
 			}
 		}
-		
-		for(i = 0; i < _numDestinations; i++)
+		if(_exhaustTag != "")
 		{
-			if (string_pos(_exhaustTag[i] + "target_",_flags[i]) == 0)
+			for(i = 0; i < _numDestinations; i++)
 			{
-				_numNonTarget++;
-			}
-			else
-			{
-				_exhaustTagTarget[_numTarget][ 0] = _exhaustTag[i] + "target_";
-				_exhaustTagTarget[_numTarget][ 1] = 0; //amount of required flags to trigger
-				_exhaustTagTarget[_numTarget][ 2] = 0; //amount that have been triggered
-				if(string_pos("ULTRA", _flags[i]) !=0)
+				if (string_pos(_exhaustTag[i] + "target_",_flags[i]) == 0)
 				{
-					_numUltra++;
+					_numNonTarget++;
 				}
-					_numTarget++;
-			}
-		}
-		
-		for(i = 0; i < _numTarget; i++)
-		{
-			for(var j = 0; j < _numNonTarget; j++)
-			{
-				if (string_pos(_exhaustTag[j],_exhaustTagTarget[i][ 0]) != 0)
+				else
 				{
-					_exhaustTagTarget[i][ 1] += 1;
+					_exhaustTagTarget[_numTarget][ 0] = _exhaustTag[i] + "target_";
+					_exhaustTagTarget[_numTarget][ 1] = 0; //amount of required flags to trigger
+					_exhaustTagTarget[_numTarget][ 2] = 0; //amount that have been triggered
+					if(string_pos("ULTRA", _flags[i]) !=0)
+					{
+						_numUltra++;
+					}
+						_numTarget++;
 				}
 			}
-		}
 		
+			for(i = 0; i < _numTarget; i++)
+			{
+				for(var j = 0; j < _numNonTarget; j++)
+				{
+					if (string_pos(_exhaustTag[j],_exhaustTagTarget[i][ 0]) != 0)
+					{
+						_exhaustTagTarget[i][ 1] += 1;
+					}
+				}
+			}
+		}
 		for(i = 0; i < _numDestinations - _numUltra; i++)
 		{
 			if(i < array_length(global.boolFlags))
@@ -378,12 +379,14 @@ function instruction_parser(_instructions) {
 			{
 				global.totalDestinations--;
 			}
-			while(string_pos(_exhaustTag[i], _exhaustTagTarget[_targetIndex][0]) == 0)
+			if(_exhaustTag != "")
 			{
-				_targetIndex++;
+				while(string_pos(_exhaustTag[i], _exhaustTagTarget[_targetIndex][0]) == 0)
+				{
+					_targetIndex++;
+				}
 			}
-			
-			show_debug_message("The flag " + _exhaustTag[i] + " targets "+ _exhaustTagTarget[_targetIndex][0]);
+			//show_debug_message("The flag " + _exhaustTag[i] + " targets "+ _exhaustTagTarget[_targetIndex][0]);
 			
 			if(_wasClicked[i] && string_pos("target_",_flags[i]) == 0)
 			{
@@ -392,11 +395,11 @@ function instruction_parser(_instructions) {
 			
 			//show_debug_message("_NOaccessUltraTarget is currently set to " + string(_NOaccessUltraTarget));
 			global.choiceLabels[i] = "~~~~~~LOCKED~~~~~~";	
-			if((string_pos(_exhaustTag[i] + "target_",_flags[i]) == 0 
+			if(_exhaustTag != "" && (string_pos(_exhaustTag[i] + "target_",_flags[i]) == 0 
 			&& string_pos(_exhaustTag[i], _flags[i]) != 0 
 			&&	string_pos("ULTRA",_flags[i]) == 0) 
 			&& !_wasClicked[i]
-			|| (_exhaustTagTarget[_targetIndex][ 2] == _exhaustTagTarget[_targetIndex][ 1] 
+			|| _exhaustTag != "" && (_exhaustTagTarget[_targetIndex][ 2] == _exhaustTagTarget[_targetIndex][ 1] 
 			&& string_pos("ULTRA",_flags[i]) == 0)
 			&& !_wasClicked[i])
 			{
@@ -453,6 +456,7 @@ function instruction_parser(_instructions) {
 				create_TB(global.branches, 1, _destinations[i], on_click_TB, flag);
 				_shouldnotList = true;
 			}
+			
 		
 		
 		}

@@ -45,12 +45,12 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			show_debug_message("Replacing flag " + global.flags[i] + " with flag " + _flag);
 			global.flags[i] = _flag;
 		}
-		
+		/*
 		if(string_pos("{PLAYERNAME}", _branches[_branchAddress][_index]) != 0)
 		{
 			_branches[_branchAddress][_index] = string_replace_all(_branches[_branchAddress][_index], "{PLAYERNAME}", global.playerName);
 		}
-		
+		*/
 	
 		if(string_pos(global.flags[i], _branches[_branchAddress][_index]) == 0)	
 		{
@@ -95,7 +95,20 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			create_shaker();
 		
 	}
-
+	
+	if(string_pos("“", _branches[_branchAddress][_iterator]) != 0)
+	{
+		_branches[_branchAddress][_iterator] = string_replace_all(_branches[_branchAddress][_iterator], "“", "\"");
+	}
+	if(string_pos("”", _branches[_branchAddress][_iterator]) != 0)
+	{
+		_branches[_branchAddress][_iterator] = string_replace_all(_branches[_branchAddress][_iterator], "”", "\"");
+	}
+	if(string_pos("’", _branches[_branchAddress][_iterator]) != 0)
+	{
+		_branches[_branchAddress][_iterator] = string_replace_all(_branches[_branchAddress][_iterator], "’", "'");
+	}
+	
 	return _branches[_branchAddress][_iterator];
 
 

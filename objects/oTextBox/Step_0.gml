@@ -16,7 +16,7 @@
 	{
 		create_namePlate(name, x_namePlate, y_namePlate);
 		show_debug_message("There are " + string(_nameCount) + " name plates");
-		_nameCount++;
+		//_nameCount++;
 		createdName = true;
 	}
 	else if(!hasName)

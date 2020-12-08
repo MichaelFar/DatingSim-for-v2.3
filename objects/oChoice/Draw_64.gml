@@ -5,6 +5,7 @@ stringWidth = string_width(text);
 length = (x + (stringWidth ) + padding - offset) - (x - (padding + offset));
 leftSide = (room_width) - (room_width / 2) - length;
 rightSide = (room_width / 2)
+draw_set_font(textBoxFont);
 if(leftSide < (rightSide * .7))
 {
 	offset = stringWidth div 3;
