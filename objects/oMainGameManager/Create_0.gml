@@ -5,7 +5,7 @@ global.boxY = (room_height * .75);
 audio_stop_all();
 index = 0;
 metaString = "";
-
+audio_group_load(LilaBarks);
 global.branches = 0;//All branches of dialogue player can access
 global.currentBranch = 0;//where the player is within the branches
 global.instructions = 0;//instructions written at the end of each text file
@@ -27,4 +27,5 @@ global.currentBackground = 0;
 global.keys = 0;
 global.keys[0] = "";
 global.keyCount = 0;
+global.currentBark = -1;
 event_user(0);
