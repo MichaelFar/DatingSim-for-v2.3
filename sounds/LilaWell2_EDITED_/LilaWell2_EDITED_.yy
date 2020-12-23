@@ -13,8 +13,8 @@
   "soundFile": "LilaWell2_EDITED_.wav",
   "duration": 1.446497,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaWell2_EDITED_",

@@ -13,8 +13,8 @@
   "soundFile": "LilaYouPervert_3rd_accusatory_EDITED_.wav",
   "duration": 1.512823,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaYouPervert_3rd_accusatory_EDITED_",

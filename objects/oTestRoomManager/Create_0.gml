@@ -8,4 +8,5 @@ array[0][0] = "hello";
 array[0][1] = "goodbye";
 show_debug_message("The size of this two dimensional array is " + string(array_length(array[0])));
 */
-create_bark(LilaBaka_YouBaka_EDITED_);
+var index = asset_get_index("LilaGetUp_3rd_EDITED_")
+create_bark(index);

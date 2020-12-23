@@ -5,7 +5,8 @@ function create_bark(sound){
 	var _bark = instance_create_layer(0, 0, "Instances", oMasterBarker)
 	with(_bark)
 	{
-		global.currentBark = sound;
+		//global.currentBark = sound;
+		//show_debug_message("currentBark = " + audio_get_name(sound));
 		if(audio_exists(sound))
 		{
 			show_debug_message("That sound exists");

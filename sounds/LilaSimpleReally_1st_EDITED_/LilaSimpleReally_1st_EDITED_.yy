@@ -13,8 +13,8 @@
   "soundFile": "LilaSimpleReally_1st_EDITED_.wav",
   "duration": 1.429875,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaSimpleReally_1st_EDITED_",

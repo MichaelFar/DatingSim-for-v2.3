@@ -13,8 +13,8 @@
   "soundFile": "LoseTheLilaKeepTheBaka.wav",
   "duration": 0.706315,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LoseTheLilaKeepTheBaka",

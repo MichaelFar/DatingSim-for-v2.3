@@ -13,8 +13,8 @@
   "soundFile": "LilaGasp1_EDITED_.wav",
   "duration": 0.725023,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaGasp1_EDITED_",

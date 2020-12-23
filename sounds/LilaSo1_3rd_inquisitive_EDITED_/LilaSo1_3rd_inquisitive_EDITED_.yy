@@ -13,8 +13,8 @@
   "soundFile": "LilaSo1_3rd_inquisitive_EDITED_.wav",
   "duration": 1.12441,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaSo1_3rd_inquisitive_EDITED_",

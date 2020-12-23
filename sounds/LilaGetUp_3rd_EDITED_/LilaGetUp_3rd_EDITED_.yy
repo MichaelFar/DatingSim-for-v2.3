@@ -13,8 +13,8 @@
   "soundFile": "LilaGetUp_3rd_EDITED_.wav",
   "duration": 1.165522,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaGetUp_3rd_EDITED_",

@@ -13,8 +13,8 @@
   "soundFile": "LilaGUB2_EDITED_.wav",
   "duration": 1.834365,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaGUB2_EDITED_",

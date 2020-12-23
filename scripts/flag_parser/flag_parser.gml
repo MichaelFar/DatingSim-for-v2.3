@@ -23,7 +23,7 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	var _iterator = _index;
 	var i = 0;
 	var _buffer = 0;
-	
+	var BarkID = "";
 		
 	for (i = 0; i < array_length(global.flags); i++) 
 	{
@@ -94,6 +94,23 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 		
 			create_shaker();
 		
+	}
+	
+	if(string_pos("BARK_", _branches[_branchAddress][_iterator]) != 0)
+	{
+			_buffer = string_delete(_branches[_branchAddress][_iterator], string_pos("BARK_", _branches[_branchAddress][_iterator]), string_pos("_BARK", _branches[_branchAddress][_iterator]));
+		
+			_EX = string_replace(_branches[_branchAddress][_iterator], _buffer, "");
+			
+			_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], _EX, "");
+			_EX = string_replace(_EX, "BARK_", "");
+			_EX = string_replace(_EX, "_BARK", "");
+			show_debug_message("_EX as BARK BUFFER IS = " + _EX);
+			audio_exists(asset_get_index(_EX));
+			BarkID = asset_get_index(_EX);
+			global.currentBark = BarkID;
+			show_debug_message("BarkID points to " + audio_get_name(BarkID));
+			create_bark(BarkID);
 	}
 	
 	if(string_pos("“", _branches[_branchAddress][_iterator]) != 0)

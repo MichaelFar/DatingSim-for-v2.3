@@ -1,10 +1,10 @@
 BACKGROUND_FLAG[player-bedroom]???: “Come on,GET UP, baka! You’re going to make me late for school!” [SHAKE]
 You wake up to a girl standing over you. 
 Startled, you blink sleep from your eyes, her face slowly coming into focus.  She looks angry.
-???: “Are you deaf, PenisChamp? I said GET UP!” [SHAKE]
+???: “Are you deaf, PenisChamp? I said GET UP!” [SHAKE]BARK_LilaGetUp_3rd_EDITED__BARK
 Very angry. You squint, trying to make out her features.
 ???: “PenisChamp, please. PLEASE don’t make us late again. It’s the fifth time this month!”
-She’s starting to sound desperate now.
+She’s starting to sound desperate now.BARK_LilaGetUp_3rd_EDITED__BARK
 Wait a minute. You know that voice. It’s the voice of--
 PC: “Lila? What are you doing in my room?” 
 Lila is one of my closest friends, but it’s still weird for her to be in here. Especially since... 

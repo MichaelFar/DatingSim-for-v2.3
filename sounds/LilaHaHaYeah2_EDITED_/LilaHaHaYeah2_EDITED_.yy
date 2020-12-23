@@ -13,8 +13,8 @@
   "soundFile": "LilaHaHaYeah2_EDITED_.wav",
   "duration": 1.530941,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaHaHaYeah2_EDITED_",

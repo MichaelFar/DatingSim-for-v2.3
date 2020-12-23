@@ -13,8 +13,8 @@
   "soundFile": "LilaBaka1_EDITED_.wav",
   "duration": 2.248333,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaBaka1_EDITED_",

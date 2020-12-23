@@ -14,10 +14,11 @@ function on_click_TB() {
 			show_debug_message("Time for instructions ");
 			instruction_parser(global.instructions);
 		}
-		if(instance_exists(oMasterBarker))
+		if(audio_is_playing(global.currentBark))
 		{
+			show_debug_message("A Bark is playing");
 			//instance_destroy(oMasterBarker);
-			audio_stop_sound(global.currentBark);
+			//audio_stop_sound(global.currentBark);
 		}
 	}
 	else if (objectType == "CH") 

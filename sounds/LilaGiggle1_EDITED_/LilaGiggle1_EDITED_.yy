@@ -13,8 +13,8 @@
   "soundFile": "LilaGiggle1_EDITED_.wav",
   "duration": 0.929467,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "LilaBarks",
+    "path": "folders/Sounds/LilaBarks.yy",
   },
   "resourceVersion": "1.0",
   "name": "LilaGiggle1_EDITED_",
