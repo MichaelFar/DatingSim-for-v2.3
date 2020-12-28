@@ -13,15 +13,15 @@ PC: “Oh. Sorry!”
 You quickly walk back to where Lila is, waiting for you.
 “Stupid,” you think to yourself. Why’d you even let Lila talk you into doing something like this anyway?
 {Scene change back to talking to Lila}
-Lila: “So? What’d she say?”
+Lila: “So? What’d she say?”BARK_LilaSo1_3rd_inquisitive_EDITED__BARK
 PC: “She said no, just like I said she would. Why’d you even make me humiliate myself like that, anyway?”
 Lila: “She said no? But... didn’t you give her what she wanted?”
 [EX_hhh]text_flag_hugPC: "I gave her a hug, if that's what you mean."
 [EX_hhh]text_flag_high_fivePC: "I gave her a high five, if that's what you mean."
 [EX_hhh]text_flag_hand_shakePC: "I gave her a hand shake, if that's what you mean."
-Lila: “You gave her what?!?! Baka Penischamp, everyone knows that girl wants a Bionicle®!” [Shake]
+Lila: “You gave her what?!?! Baka Penischamp, everyone knows that girl wants a Bionicle®!” [SHAKE]
 PC: “Well I didn’t know that! Besides, how would that have even changed anything?”
-Lila: “Ugh. You’re such a dummy, PenisChamp. Everyone at Inspire wants something-- if you give it to them, they’ll go to prom with you!”
+Lila: “Ugh. You’re such a dummy, PenisChamp. Everyone at Inspire wants something-- if you give it to them, they’ll go to prom with you!”BARK_LoseTheLilaKeepTheBaka_BARK
 PC: “What? Why?”
 Lila: “Because that’s how it works! Anyone will go to prom with you if you can find out what they want, and give it to them.”
 PC: “Like--like, they have to go to prom with you? No matter what?”
@@ -31,7 +31,7 @@ Lila: “I don’t make the rules, PenisChamp. Besides, how did you not know thi
 PC: “Yeah, but, well-- I’m a slow learner. It somehow still feels like it’s the first day.”
 Lila: “Useless. Hey, what are you holding there?”
 She takes the pack of cigarettes out of your hand, looks at it, then gasps.
-Lila: “So you did know!”
+Lila: “So you did know!”BARK_LilaGasp1_EDITED__BARK
 PC: “Know what?”
 Lila: “About the items!”
 Lila is smiling wide now.
@@ -61,10 +61,10 @@ PC: “Then... how’d you expect me to get these, even? We’re not old enough 
 Lila: “By asking that girl out!”
 PC: “What?”
 {Scene change to Lila smiling}
-Lila: “Well, I figured if you got rejected by her, she’d get mad and throw those at you.”
+Lila: “Well, I figured if you got rejected by her, she’d get mad and throw those at you.”BARK_LilaWell2_EDITED__BARK
 PC: “How did you know she’d do something random like that?! Are you psychic or something?”
 Lila WeirdChamps you.
-Lila: “People at Inspire always give you an item if they reject you! Jeez, PenisChamp, don’t you know anything?”
+Lila: “People at Inspire always give you an item if they reject you! Jeez, PenisChamp, don’t you know anything?”BARK_LoseTheLilaKeepTheBaka_BARK
 PC: “Apparently not. Wait, so the only way I could have gotten an item to ask you out... is by getting turned down by someone else?”
 Lila: “Well, sometimes you’ll be the one turning them down.”
 PC: “What?”
@@ -74,6 +74,7 @@ Lila: “By getting to know them!”
 PC: “So I might have potentially had to get to know everyone at the school to figure out whose item that was?”
 Lila: “Well, people who have each other's items tend to know each other. That’s why they have something that’s so important to that other person!”
 PC: “Geez, that seems like kind of a complicated process just to get a date to prom! I’m glad I don’t have to deal with that anymore, now that we’re going together.”
+Lila: "Uhh..."BARK_LilaHaHaYeah2_EDITED__BARK
 PC: “Hey, so, like, I should probably get you a--what are those things called... A corsage, right? What color is your dress going to be?”
 Lila: “You don’t need to do all that, PenisChamp. We’re just going as friends, after all! And besides, I wouldn’t want people to think we were dating or something like that.”
 PC: “Yeah, I--I guess that makes sense.” 
