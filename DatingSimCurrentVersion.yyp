@@ -134,6 +134,10 @@
     {"folderPath":"folders/Animation Curves.yy","order":2,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Extensions/ScriptsButItClonedIDKwhy.yy","order":0,"resourceVersion":"1.0","name":"ScriptsButItClonedIDKwhy","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/LilaBarks.yy","order":19,"resourceVersion":"1.0","name":"LilaBarks","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters.yy","order":6,"resourceVersion":"1.0","name":"Characters","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters/Lila.yy","order":1,"resourceVersion":"1.0","name":"Lila","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters/Lila/face.yy","order":1,"resourceVersion":"1.0","name":"face","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters/Lila/body.yy","order":2,"resourceVersion":"1.0","name":"body","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
