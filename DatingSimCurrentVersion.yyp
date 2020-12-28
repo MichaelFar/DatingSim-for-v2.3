@@ -71,6 +71,7 @@
     {"id":{"name":"oMainGameManager","path":"objects/oMainGameManager/oMainGameManager.yy",},"order":3,},
     {"id":{"name":"create_shaker","path":"scripts/create_shaker/create_shaker.yy",},"order":9,},
     {"id":{"name":"oTextBox","path":"objects/oTextBox/oTextBox.yy",},"order":0,},
+    {"id":{"name":"godthisisapain","path":"notes/godthisisapain/godthisisapain.yy",},"order":0,},
     {"id":{"name":"oChoice","path":"objects/oChoice/oChoice.yy",},"order":1,},
     {"id":{"name":"LilaWell2_EDITED_","path":"sounds/LilaWell2_EDITED_/LilaWell2_EDITED_.yy",},"order":13,},
     {"id":{"name":"oNamePlate","path":"objects/oNamePlate/oNamePlate.yy",},"order":2,},
