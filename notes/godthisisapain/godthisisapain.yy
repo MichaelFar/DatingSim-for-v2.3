@@ -4,7 +4,7 @@
     "path": "folders/Sprites/Characters/Lila/body.yy",
   },
   "resourceVersion": "1.1",
-  "name": "Note2",
+  "name": "godthisisapain",
   "tags": [],
   "resourceType": "GMNotes",
 }
