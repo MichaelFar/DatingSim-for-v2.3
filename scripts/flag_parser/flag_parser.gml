@@ -24,7 +24,8 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	var i = 0;
 	var _buffer = 0;
 	var BarkID = "";
-		
+	var _bodyID = -1;
+	var _faceID = -1;
 	for (i = 0; i < array_length(global.flags); i++) 
 	{
 		if (string_pos("[", global.flags[i]) != 0)  //Checks for flag exclusivity clause
@@ -106,11 +107,37 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			_EX = string_replace(_EX, "BARK_", "");
 			_EX = string_replace(_EX, "_BARK", "");
 			show_debug_message("_EX as BARK BUFFER IS = " + _EX);
-			audio_exists(asset_get_index(_EX));
+			//audio_exists(asset_get_index(_EX));
 			BarkID = asset_get_index(_EX);
 			global.currentBark = BarkID;
 			show_debug_message("BarkID points to " + audio_get_name(BarkID));
 			create_bark(BarkID);
+	}
+	
+	if(string_pos("BODY_", _branches[_branchAddress][_iterator]) != 0)
+	{
+			_buffer = string_delete(_branches[_branchAddress][_iterator], string_pos("BODY_", _branches[_branchAddress][_iterator]), string_pos("_BODY", _branches[_branchAddress][_iterator]));
+			_EX = string_replace(_branches[_branchAddress][_iterator], _buffer, "");
+			_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], _EX, "");
+			_EX = string_replace(_EX, "BODY_", "");
+			_EX = string_replace(_EX, "_BODY", "");
+			show_debug_message("Body name is " + _EX);
+			_bodyID = asset_get_index(_EX);
+			
+			global.currentBody = _bodyID;
+			if(string_pos("FACE_", _branches[_branchAddress][_iterator]) != 0)
+			{
+				_buffer = string_delete(_branches[_branchAddress][_iterator], string_pos("FACE_", _branches[_branchAddress][_iterator]), string_pos("_FACE", _branches[_branchAddress][_iterator]));		
+				_EX = string_replace(_branches[_branchAddress][_iterator], _buffer, "");
+				_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], _EX, "");
+				_EX = string_replace(_EX, "FACE_", "");
+				_EX = string_replace(_EX, "_FACE", "");
+				_faceID = asset_get_index(_EX);
+				global.currentFace = _faceID;
+			}
+			show_debug_message("Body fetched was " + sprite_get_name(_bodyID));
+			create_charBody(oTextBox.x, oTextBox.y - 450, _bodyID, _faceID);
+			
 	}
 	
 	if(string_pos("“", _branches[_branchAddress][_iterator]) != 0)

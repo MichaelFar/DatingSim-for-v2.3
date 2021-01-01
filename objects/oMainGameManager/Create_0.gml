@@ -28,4 +28,6 @@ global.keys = 0;
 global.keys[0] = "";
 global.keyCount = 0;
 global.currentBark = -1;
+global.currentBody = -1;
+global.currentFace = -1;
 event_user(0);
