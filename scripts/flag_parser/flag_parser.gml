@@ -139,6 +139,14 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 			create_charBody(oTextBox.x, oTextBox.y - 450, _bodyID, _faceID);
 			
 	}
+	if(string_pos("BODY_DESTROY", _branches[_branchAddress][_iterator]) != 0)
+	{
+		instance_destroy(oCharBody);
+		instance_destroy(oCharFace);
+		global.currentBody = -1;
+		global.currentFace = -1;
+		_branches[_branchAddress][_iterator] = string_replace(_branches[_branchAddress][_iterator], "BODY_DESTROY", "");
+	}
 	
 	if(string_pos("“", _branches[_branchAddress][_iterator]) != 0)
 	{
