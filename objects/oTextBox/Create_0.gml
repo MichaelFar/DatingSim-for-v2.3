@@ -22,6 +22,7 @@ x_textName =  sprite_get_xoffset(sprite_index);
 y_textName = sprite_get_yoffset(sprite_index);
 x_namePlate = x - (x_textName);
 y_namePlate = y - y_textName;
+shouldType = true;
 global.namePlateX = x_namePlate;
 global.namePlateY = y_namePlate;
 global.currentFlag = flag;

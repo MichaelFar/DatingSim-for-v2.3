@@ -2,7 +2,7 @@ function on_click_TB() {
 	/*
 
 	*/
-	if (objectType == "TB" && !instance_exists(oShaker)) 
+	if (objectType == "TB" && !instance_exists(oShaker) && textType == text) 
 	{
 		index += 1;
 		if (index < array_length(currentArray[global.currentBranch])) 
@@ -20,6 +20,12 @@ function on_click_TB() {
 			//instance_destroy(oMasterBarker);
 			//audio_stop_sound(global.currentBark);
 		}
+	}
+	else if(objectType == "TB" && textType != text)
+	{
+		instance_destroy(oShaker);
+		//show_debug_message("Length of text is " + string(string_length(text)) + " and charCount is " + string(charCount));
+		shouldType = false;
 	}
 	else if (objectType == "CH") 
 	{
