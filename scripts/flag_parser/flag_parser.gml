@@ -160,7 +160,7 @@ function flag_parser(_flag, _branches, _branchAddress, _index) {
 	{
 		_branches[_branchAddress][_iterator] = string_replace_all(_branches[_branchAddress][_iterator], "’", "'");
 	}
-	
+	global.currentBranch = _branchAddress;
 	return _branches[_branchAddress][_iterator];
 
 

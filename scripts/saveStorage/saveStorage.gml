@@ -3,11 +3,11 @@ function saveStorage() {
 	{
 		file_delete("listOfSaves.txt");
 	}
-	var index = 0;
+	//var index = 0;
 	var i = 0;
 	var openFile = file_text_open_write("listOfSaves.txt");
 
-	var _buffer = 0;
+	//var _buffer = 0;
 
 	file_text_write_string(openFile, global.numSaves);
 	file_text_writeln(openFile);

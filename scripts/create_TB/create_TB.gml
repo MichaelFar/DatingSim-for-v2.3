@@ -4,13 +4,10 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 	
 
 	
-	create_TB is called in instruction_parser and the user event 0 within oMainGameManager
-	
-	var _branches = argument[0];
-	var _index = argument[1];
-	var _branchAddress = argument[2];
-	var _script = argument[3];
-	var _flag = argument[4];
+	create_TB is called in :
+	instruction_parser and the user event 0 within oMainGameManager
+	load_game
+	oList
 	
 	*/
 	var _textBuffer = 0;

@@ -4,6 +4,7 @@ function load_game(_loadedFile) {
 
 	var openFile = file_text_open_read(working_directory + _loadedFile);
 	var i = 0;
+	var j = 0;
 	var _numFlags = 0;
 	var _startIndex = 0;
 	var _numBoolFlags = 0;
@@ -21,7 +22,16 @@ function load_game(_loadedFile) {
 	{
 		if(i == 0)
 		{
-			global.currentBranch = global.saveFileContents[i];
+			for(j = 0; j < array_length(global.branches); j++)
+			{
+				if(global.branches[j][0] == global.branches[i][0])
+				{
+					global.currentBranch = j;
+					show_debug_message("Loaded into branch " +  global.saveFileContents[j]);
+					break;
+				}
+			//global.currentBranch = global.saveFileContents[i];
+			}
 		}
 		else if(i == 1)
 		{

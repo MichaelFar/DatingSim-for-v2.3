@@ -19,8 +19,9 @@ function save_game(_currentSave) {
 	if(!_choiceExists && !_setNameExists)
 	{
 		show_debug_message("Saving game");
-		file_text_write_real(openFile, global.currentBranch);
+		file_text_write_string(openFile, global.branches[global.currentBranch][0]);
 		file_text_writeln(openFile);
+		show_debug_message("The branch you were in before you saved was " + global.branches[global.currentBranch][0]);
 	
 	
 		file_text_write_real(openFile, global.newFlagIndex);

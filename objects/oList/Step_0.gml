@@ -253,7 +253,7 @@ for (var i = 0; i < _size; i++)
 						script_execute(saveStorage);
 					}
 				break;
-				
+				//SAVE MENU, only allows for ~17 saves
 				case "(NO SAVE)":
 					if(type == LIST_TYPE.SAVE_MENU)
 					{
