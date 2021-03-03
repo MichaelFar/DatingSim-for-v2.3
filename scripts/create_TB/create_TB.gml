@@ -23,7 +23,10 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 	
 		//This loop finds the name from the text file and makes sure it doesn't show up in the main text
 		//The name should show up in the designated nameplate area
-		keyFinder();
+		if(!global.inLog)
+		{
+			keyFinder();
+		}
 		if(array_length(_branches[_branchAddress]) == 1) //If the file is only instructions activate the instructions
 		{	
 			instruction_parser(global.instructions);

@@ -16,11 +16,14 @@ global.numSaves = 0;
 global.savedGames[global.numSaves] = "";
 global.wasInMainMenu = false;
 global.saveGameBuffer = "";
+global.fullscreen = false;
 if(file_exists("Settings.txt"))
 {
 	script_execute(load_settings);
 	
 	audio_sound_gain(global.currentMusic, global.musicVolume / 100, 0);	
+	
+	window_set_fullscreen(global.fullscreen);
 }
 for(var i = 0; i < 16; i++)
 {

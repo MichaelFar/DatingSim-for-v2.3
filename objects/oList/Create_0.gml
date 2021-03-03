@@ -14,7 +14,7 @@ createObjectString = "Create Object";
 objectArray = 0;
 objectArray[0] = "0";
 shouldBreak = false;
-
+shouldEscape = false;
 list = ds_list_create();
 
 if(instance_exists(oChoice) || instance_exists(oTextBox))

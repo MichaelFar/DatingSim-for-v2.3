@@ -30,4 +30,6 @@ global.keyCount = 0;
 global.currentBark = -1;
 global.currentBody = -1;
 global.currentFace = -1;
+global.inLog = false;
+
 event_user(0);

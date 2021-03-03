@@ -15,8 +15,9 @@ if(room = RMmainGame)
 
 
 //show_debug_message("The amount of options availibe is " + string(_size));
-if(keyboard_check_pressed(vk_escape))
+if(keyboard_check_pressed(vk_escape) || shouldEscape)
 {
+	shouldEscape = false;
 	if(room == RMmainMenu)
 	{
 		event_perform_object(oMainMenuManager, ev_other, ev_user0);
@@ -59,6 +60,7 @@ if(array_length(global.currentSettings) < _size && type == LIST_TYPE.SETTINGS)
 		{
 			global.currentSettings[i] = 0;
 		}
+		show_debug_message("Setting stored: " + _name);
 	}
 }
 
@@ -111,9 +113,15 @@ for (var i = 0; i < _size; i++)
 			global.voiceVolume = _vals[global.currentSettings[i]];
 			break;
 			
+			case "Fullscreen":
+			global.fullscreen   = _vals[global.currentSettings[i]];			
+			break;
+			
 			case "Text Speed":
 			global.textSpeed   = _vals[global.currentSettings[i]];			
 			break;
+			
+			
 		}
 	}
 	else
@@ -168,6 +176,9 @@ for (var i = 0; i < _size; i++)
 				case "Apply":
 					audio_sound_gain(global.currentMusic, global.musicVolume / 100, 0);
 					script_execute(save_settings);
+					window_set_fullscreen(global.fullscreen);
+					shouldEscape = true;
+					shouldBreak = true;
 				break;
 				//Pause menu
 				case "Resume":
@@ -372,11 +383,20 @@ for (var i = 0; i < _size; i++)
 						
 						break;
 						
+						case "Fullscreen":
+						
+							//global.textSpeed = _vals[global.currentSettings[i]];
+							global.fullscreen = _vals[global.currentSettings[i]];
+							
+						break;
+						
 						case "Text Speed":
 						
 							global.textSpeed = _vals[global.currentSettings[i]];
 						
 						break;
+						
+						
 						
 					}
 				}

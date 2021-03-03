@@ -25,6 +25,11 @@ function load_volume() {
 		{
 			global.textSpeed = real(_saveFileContents[i]);
 		}
+		else if (i == 3)
+		{
+			
+			global.fullscreen = real(_saveFileContents[i]);
+		}
 	
 		show_debug_message("Loading setting " + string(_saveFileContents[i]));
 	}

@@ -78,13 +78,27 @@ for (i = 0; i < _size; i++)
 		draw_set_halign(fa_right);
 		if(type == LIST_TYPE.SETTINGS)
 		{
-			if(_name != "Text Speed")
+			if(_name != "Text Speed" && _name != "Fullscreen")
 			{
 				draw_text(x + width - padding, _y, string(_val) + "%");
 			}
 			else
 			{
-				draw_text(x + width - padding, _y, string(_val));
+				if(_name == "Fullscreen")
+				{
+					if(_val)
+					{
+						draw_text(x + width - padding, _y, "Yes");
+					}
+					else
+					{
+						draw_text(x + width - padding, _y, "No");
+					}
+				}
+				else
+				{
+					draw_text(x + width - padding, _y, string(_val));
+				}
 			}
 		}
 		else
