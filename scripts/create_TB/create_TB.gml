@@ -33,7 +33,7 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 		}
 		else
 		{
-			_textBuffer = flag_parser(_flag, _branches,_branchAddress, _index);
+			_textBuffer = flag_parser(_flag, _branches,_branchAddress, _index, false);
 			for(k = 0; k < array_length(global.names); k++) 
 			{
 				if (string_pos(global.names[k], _textBuffer) != 0) 
@@ -46,6 +46,7 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 						_textBuffer = string_replace_all(_textBuffer, "{PLAYERNAME}", global.playerName);
 					}
 					text = _textBuffer;
+					
 					hasName = true;	//Instructs the text box to draw a name 
 					name = global.names[k]; //This sets the nameplate to be whatever the name in the text line is
 					if(name == "PC:")
@@ -67,14 +68,34 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 						_textBuffer = string_replace_all(_textBuffer, "{PLAYERNAME}", global.playerName);
 					}
 					text = _textBuffer;
+					
 					hasName = false;	
 					name = "";
+					
 				}
 			}
 		}
 			script = _script;
 			currentArray = _branches;
 			index = global.newFlagIndex;
+			show_debug_message("textHistoryTracker is now: " + string(global.textHistoryTracker));
+			if(global.textHistoryTracker != 0)
+			{
+				show_debug_message("Current dialogue is " + _textBuffer + " while current textHistory is " + global.textHistory[global.textHistoryTracker - 1])
+				if(global.textHistory[global.textHistoryTracker - 1] != _textBuffer)
+				{
+					global.textHistory[global.textHistoryTracker] = text;
+					global.textHistoryTracker++;
+				}
+			}
+			else
+			{
+				if(global.textHistory[0] != _textBuffer)
+				{
+					global.textHistory[global.textHistoryTracker] = text;
+					global.textHistoryTracker++;
+				}
+			}
 			show_debug_message("Current index at the end of create_TB " + string(index));
 	}
 

@@ -8,7 +8,7 @@ if(!audio_is_playing(intro) && !audio_is_playing(part_that_loops))
 {
 	global.currentMusic = audio_play_sound(intro, 1000 ,false);
 }
-
+global.choiceLabels = 0;
 global.currentSettings = 10;
 global.savedGames = 0;
 global.textSpeed = 1;

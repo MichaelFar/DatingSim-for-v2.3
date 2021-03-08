@@ -38,6 +38,7 @@ function create_list(_x, _y, _width, _height, _type) {
 				ds_list_add(list, ["Save",-1,[]])
 				ds_list_add(list, ["Load",-1,[]])
 				ds_list_add(list, ["Options",-1,[]])
+				ds_list_add(list, ["Text Log",-1,[]])
 				ds_list_add(list, ["Return To Main Menu Without Saving",-1,[]])
 				ds_list_add(list, ["Exit Without Saving",-1,[]]);
 			break;

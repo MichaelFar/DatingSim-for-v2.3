@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"SPRblueTextBox","path":"sprites/SPRblueTextBox/SPRblueTextBox.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "SPRblueTextBox",
     "tags": [],
     "resourceType": "GMSequence",
   },

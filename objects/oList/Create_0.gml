@@ -16,7 +16,8 @@ objectArray[0] = "0";
 shouldBreak = false;
 shouldEscape = false;
 list = ds_list_create();
-
+_totalHeight = 0;
+_totalWidth = 0;
 if(instance_exists(oChoice) || instance_exists(oTextBox))
 {
 	instance_destroy(oChoice);

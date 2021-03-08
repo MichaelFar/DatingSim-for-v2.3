@@ -1,4 +1,4 @@
-FirstScene.txt
+prom_lila_tutorial_afterProm.txt
 FirstScene_two.txt
 aerodynamics_wiki.txt
 prom_lila_tutorial_instructions.txt
@@ -12,6 +12,7 @@ GroupChoiceInstructions.txt
 JaneMichaelStart.txt
 OscarQuinnStart.txt
 godkingplaceholder.txt
+FirstScene.txt
 RGBexit.txt
 RGBinstructions.txt
 RGBresults.txt
@@ -31,7 +32,6 @@ prom_lila_tutorial_fastdance.txt
 prom_lila_tutorial_slowdance.txt
 prom_lila_tutorial_photobooth.txt
 prom_lila_tutorial_break.txt
-prom_lila_tutorial_afterProm.txt
 prom_lila_tutorial_dance_result.txt
 prom_lila_tutorial_danceResultInstructions.txt
 prom_lila_tutorial_girlChoice.txt

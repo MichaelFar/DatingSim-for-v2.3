@@ -196,11 +196,6 @@ for (var i = 0; i < _size; i++)
 				break;
 				
 				case "Save":
-				/*
-					global.savedGames[global.numSaves] = save_game(metaString);
-					global.numSaves++;
-					
-				*/
 					instance_destroy();
 					create_list(room_width / 2 - (300 / 2), room_height / 2 - (240 / 2), 300, 240, LIST_TYPE.SAVE_MENU);
 					global.inPauseMenu = true;
@@ -216,6 +211,12 @@ for (var i = 0; i < _size; i++)
 					instance_destroy();
 					create_list(room_width / 2 - (300 / 2), room_height / 2 - (240 / 2), 300, 240, LIST_TYPE.SETTINGS);
 					global.inPauseMenu = true;
+				break;
+				
+				case "Text Log":
+					instance_destroy(oList);
+					text_log();
+					
 				break;
 				
 				case "Return To Main Menu Without Saving":
@@ -306,7 +307,8 @@ for (var i = 0; i < _size; i++)
 						if(!global.prompt.hasAsked)
 						{
 							instance_destroy();
-							create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.ARE_YOU_SURE);
+							//create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.ARE_YOU_SURE);
+							create_list(room_width / 2 - (_totalWidth / 2), room_height / 2 - (_totalHeight / 2), _totalWidth, _totalHeight, LIST_TYPE.ARE_YOU_SURE);
 							global.prompt.index = global.choiceDestinations[i];
 							shouldBreak = true;
 						}
@@ -335,7 +337,7 @@ for (var i = 0; i < _size; i++)
 					global.prompt.hasAsked = true;
 					global.prompt.answer = true;
 					instance_destroy();
-					create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.GROUP_CHOICE);
+					create_list(room_width / 2 - (_totalWidth / 2), room_height / 2 - (_totalHeight / 2), _totalWidth, _totalHeight, LIST_TYPE.GROUP_CHOICE);
 					shouldBreak = true;
 				break;
 				
@@ -343,7 +345,7 @@ for (var i = 0; i < _size; i++)
 					global.prompt.hasAsked = true;
 					global.prompt.answer = false;
 					instance_destroy();
-					create_list(room_width / 2, room_height / 2, width, height, LIST_TYPE.GROUP_CHOICE);
+					create_list(room_width / 2 - (_totalWidth / 2), room_height / 2 - (_totalHeight / 2), _totalWidth, _totalHeight, LIST_TYPE.GROUP_CHOICE);
 					shouldBreak = true;
 				break;
 				
@@ -362,7 +364,16 @@ for (var i = 0; i < _size; i++)
 			{
 				_sel += _wheel;
 				
-				_sel = clamp(_sel, 0, array_length(_vals) - 1)
+				//_sel = clamp(_sel, 0, array_length(_vals) - 1)
+				
+				if(_sel > array_length(_vals) - 1)
+				{
+					_sel = 0;
+				}
+				else if(_sel < 0)
+				{
+					_sel = array_length(_vals) - 1;
+				}
 				
 				_arr[@PR.SELECTED] = _sel;
 				global.currentSettings[i] = _sel;

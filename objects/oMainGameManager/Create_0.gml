@@ -31,5 +31,8 @@ global.currentBark = -1;
 global.currentBody = -1;
 global.currentFace = -1;
 global.inLog = false;
-
+global.textHistory[0] = 0;
+global.textHistoryTracker = 0;
+global.canScrollUp = true;
+global.canScrollDown = true;
 event_user(0);
