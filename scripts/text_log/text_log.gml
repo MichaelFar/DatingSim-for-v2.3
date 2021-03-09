@@ -20,7 +20,7 @@ function text_log()
 		arrayOfLogs[i] = _logBoxID;
 		if(i == global.textHistoryTracker - 1 && _logBoxID.y > room_height)
 		{
-			while(arrayOfLogs[i].y > room_height)
+			while(arrayOfLogs[i].y + string_height(arrayOfLogs[i].textType) > room_height)
 			{
 				for(j = 0; j < i + 1; j++)
 				{

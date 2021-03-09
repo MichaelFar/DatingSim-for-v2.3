@@ -4,13 +4,7 @@
 	var stringHeight = string_height(textType);
 	var stringWidth = string_width(textType);
 	
-	if(keyboard_check_released(vk_escape))
-	{
-		instance_destroy();
-		instance_destroy(oNamePlate);
-		instance_destroy(oDarkBackground);
-		create_list((room_width / 2) - (450 / 2), room_height / 2 - (400 / 2), 450, 400, LIST_TYPE.PAUSE_MENU);
-	}
+	
 	if (mouse_wheel_down() && global.canScrollUp)
 	{
 		

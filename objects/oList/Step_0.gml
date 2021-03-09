@@ -216,6 +216,7 @@ for (var i = 0; i < _size; i++)
 				case "Text Log":
 					instance_destroy(oList);
 					text_log();
+					global.inPauseMenu = true;
 					
 				break;
 				
