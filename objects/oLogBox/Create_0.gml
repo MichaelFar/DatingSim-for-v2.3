@@ -8,8 +8,9 @@ k = 0;
 //currentArray = 0;
 name = 0;
 hasName = false;
-boxWidth = sprite_width;
-boxHeight = sprite_height;
+boxWidth = 40;
+boxHeight = 40;
+//show_debug_message("LogBox height is " + string(sprite_height));
 //hover = 0;
 textType = "";
 

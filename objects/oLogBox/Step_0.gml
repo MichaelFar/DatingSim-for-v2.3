@@ -1,13 +1,17 @@
 /// @description Insert description here
 // You can write your code in this editor
+	var nameHeight = string_height(name);
+	var stringHeight = string_height(textType);
+	var stringWidth = string_width(textType);
 	
 	if(keyboard_check_released(vk_escape))
 	{
 		instance_destroy();
 		instance_destroy(oNamePlate);
+		instance_destroy(oDarkBackground);
 		create_list((room_width / 2) - (450 / 2), room_height / 2 - (400 / 2), 450, 400, LIST_TYPE.PAUSE_MENU);
 	}
-	if (mouse_wheel_up() && global.canScrollUp)
+	if (mouse_wheel_down() && global.canScrollUp)
 	{
 		
 		y -= 30;
@@ -17,21 +21,23 @@
 			
 			if(index == global.textHistoryTracker - 1)
 			{
+				y = 0;
 				global.canScrollUp = false;
 			}
 		}
 		
 		
 	}
-	else if (mouse_wheel_down() && global.canScrollDown )
+	else if (mouse_wheel_up() && global.canScrollDown )
 	{
 		y += 30;
 		global.canScrollUp = true;
-		if(y > room_height - sprite_height)
+		if(y > room_height - stringHeight)
 		{
-			//y = room_height - sprite_height;
+			
 			if(index == 0)
 			{
+				y = room_height - stringHeight;
 				global.canScrollDown = false;
 			}
 		}

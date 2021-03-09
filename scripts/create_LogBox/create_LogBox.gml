@@ -11,10 +11,11 @@ function create_LogBox(_x, _y, _index) {
 	
 	*/
 	var _textBuffer = global.textHistory[_index];
+	
 	show_debug_message("This log box is saying " + _textBuffer);
 	instance_destroy(oTextBox);
 
-	var _logBox = instance_create_layer(_x, _y, "Instances", oLogBox);
+	var _logBox = instance_create_layer(_x, _y, "Text", oLogBox);
 
 	with (_logBox) 
 	{
@@ -43,14 +44,12 @@ function create_LogBox(_x, _y, _index) {
 					
 					hasName = true;	//Instructs the text box to draw a name 
 					name = global.names[k]; //This sets the nameplate to be whatever the name in the text line is
+					show_debug_message("Logged name of speaker is " + name);
 					if(name == "PC:")
 					{
-						name = global.playerName;
+						name = global.playerName + ":";
 					}
-					else
-					{
-						name = string_delete(name, string_pos(":", name), string_length(name)); //Deletes the colon that is used to target the name
-					}
+					
 					break;// We break because once a name is found we have no use for the rest of the loop
 				}
 				else 

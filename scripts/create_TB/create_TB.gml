@@ -85,6 +85,10 @@ function create_TB(_branches, _index, _branchAddress, _script, _flag) {
 				if(global.textHistory[global.textHistoryTracker - 1] != _textBuffer)
 				{
 					global.textHistory[global.textHistoryTracker] = text;
+					if(hasName)
+					{
+						global.textHistory[global.textHistoryTracker] = name + ":" + text;
+					}
 					global.textHistoryTracker++;
 				}
 			}
